@@ -1,0 +1,17 @@
+﻿<div class="data-table row"  data-bind="visible: listIsNotEmpty">
+    <div class="header row">
+        <div class="col_3">
+            Pracownik
+        </div>
+        <div class="col_3 last">
+            Kierunek
+        </div>
+    </div>
+
+    <ul class="body row" data-bind="foreach: list">
+        <li class="row" data-bind="click: $root.selectEntity, attr: { data_id: $data.Id }, css: { selected: $data.Id() == $root.selectedItem() }">
+            <div class="col_3" data-bind="text: $data.Name"></div>
+            <div class="col_3 last" data-bind="text: $data.Course"></div>
+        </li>
+    </ul>
+</div>

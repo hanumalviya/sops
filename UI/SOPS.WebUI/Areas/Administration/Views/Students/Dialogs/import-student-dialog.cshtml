@@ -1,0 +1,19 @@
+﻿
+<div id="import-student-dialog" class="dialog"
+    data-bind="jqDialog: { resizable: false, autoOpen: false, modal: true, width: 600, title: 'Import' },  dialogVisible: isImportStudentsDialogOpen">
+    @using (Html.BeginForm("Import", "Students", FormMethod.Post, new { enctype = "multipart/form-data", id = "importStudentsForm" }))
+    {
+        <div class="import-message"></div>
+        <div>Wskaż plik do txt z danymi studentów rozdzielonymi tabulatorami</div>
+        <input type="file" name="file" value="file" required/>
+        
+        <div class="property">
+            <div class="name"><label for="Mode">Tryb studiów</label></div>
+            <div class="value">@Html.DropDownList("Mode", new SelectList(ViewBag.Mode, "Value", "Text"))</div>
+        </div>
+        <div class="buttons">
+            <input type="submit" class="blue" value="Importuj"/>
+            <input type="button" value="Anuluj" data-bind="click: closeImportStudentsDialog"/>
+        </div>
+    }
+</div>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>@ViewBag.Title</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        @RenderSection("styles", required:false)
+        @Styles.Render("~/Content/themes/metro/css")
+        @Styles.Render("~/Content/frontend")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="site" class="container">
+            <header id="header-main" class="row">
+                <h1 id="logo" class="col_10">SOPS</h1>
+            </header>
+            <div class="row">
+                <nav id="nav-main" class="col_3">
+                    @Html.Partial("_nav")
+                </nav>
+                <div id="main-container" class="col_9 last">
+                    @RenderBody()
+                </div> 
+            </div>
+            <footer id="footer-main" class="row">
+                
+            </footer>
+        </div>
+        
+        <div class="hidden">
+            @RenderSection("dialogs", required: false)
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/jqueryval")
+        
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

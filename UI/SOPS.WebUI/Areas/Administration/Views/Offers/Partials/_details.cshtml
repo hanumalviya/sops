@@ -1,0 +1,41 @@
+﻿@model SOPS.WebUI.Areas.Administration.ViewModels.Offers.OfferViewModel
+
+<h4 class="row">
+    Szczegóły oferty
+</h4>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Title)</div>
+    <div class="col_3 value" data-bind="text: entity().Title"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Company)</div>
+    <div class="display-only-select col_3 value">
+        @Html.DropDownList("Company", new SelectList(ViewBag.Company, "Value", "Text"), new {disabled=true, data_bind="value: entity().Company" })
+    </div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Type)</div>
+    <div class="display-only-select col_3 value">
+        @Html.DropDownList("Mode", new SelectList(ViewBag.Type, "Value", "Text"), new {disabled=true, data_bind="value: entity().Type" })
+    </div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Trade)</div>
+    <div class="col_3 value" data-bind="text: entity().Trade"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Approved)</div>
+    <div class="col_3 value">
+        <input type="checkbox" disabled data-bind="checked: entity().Approved"/>
+    </div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Date)</div>
+    <div class="col_3 value" data-bind="text: entity().Date"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Description)</div>
+</div>
+<div class="row property">
+    <div class="col_5 value" data-bind="text: entity().Description"></div>
+</div>

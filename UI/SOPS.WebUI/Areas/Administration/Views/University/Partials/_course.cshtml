@@ -1,0 +1,56 @@
+﻿@model SOPS.WebUI.Areas.Administration.ViewModels.University.CourseViewModel
+
+<li class="row">
+    @using (Html.BeginForm("EditCourse", "University"))
+    {
+        <input type="hidden" name="Id" value="@Model.Id"/>
+        <input type="hidden" name="DepartmentId" value="@Model.DepartmentId"/>
+        
+        <div class="col_3">
+            <input type="text" name="Name" value="@Model.Name"/>            
+        </div>
+        <div class="col_1">
+            <strong>
+                Opiekun:
+            </strong>
+        </div>
+        <div class="col_2">
+            @if(Model.Keeper.HasValue)
+            {
+                @Html.DropDownList("Keeper", new SelectList(ViewBag.Keeper, "Value", "Text", Model.Keeper.Value))
+            }
+            else
+            {
+                @Html.DropDownList("Keeper", new SelectList(ViewBag.Keeper, "Value", "Text"))
+            }
+        </div>
+        <div class="col_1">
+            <strong>
+                Szablon:
+            </strong>
+        </div>
+        <div class="col_2">
+            @if(Model.Template.HasValue)
+            {
+                @Html.DropDownList("Template", new SelectList(ViewBag.Template, "Value", "Text", Model.Template.Value))
+            }
+            else
+            {
+                @Html.DropDownList("Template", new SelectList(ViewBag.Template, "Value", "Text"))
+            }
+        </div>
+        <div class="col_2">
+            <button type="submit" name="save" class="orange">
+                <i class="icon-save icon-large"></i>
+                Zapisz
+            </button>
+            
+            @if (ViewBag.CanBeDestroyed)
+            {
+                <button name="remove"class="red" data-itemid="@Model.Id" data-bind="click: removeCourse">
+                    <i class=" icon-remove icon-large"></i> Usuń  
+                </button>
+            }            
+        </div>
+    }
+</li>

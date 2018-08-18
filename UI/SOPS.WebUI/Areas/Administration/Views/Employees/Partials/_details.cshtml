@@ -1,0 +1,54 @@
+﻿@model SOPS.WebUI.Areas.Administration.ViewModels.Employees.EmployeeViewModel
+
+<h4 class="row">
+    Szczegóły
+</h4>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.FirstName)</div>
+    <div class="col_3 value" data-bind="text: entity().FirstName"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.LastName)</div>
+    <div class="col_3 value" data-bind="text: entity().LastName"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Email)</div>
+    <div class="col_3 value" data-bind="text: entity().Email"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Department)</div>
+    <div class="display-only-select col_3 value">
+        @Html.DropDownList("Department", new SelectList(ViewBag.Department, "Value", "Text"), new {disabled=true, data_bind="value: entity().Department" })
+    </div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Course)</div>
+    <div class="display-only-select col_3 value">
+        <select name="Course" disabled data-bind="options: availableCourses, 
+            optionsText: function(item) { 
+                return item.Text;
+            }, 
+            optionsValue: function(item) { 
+                return item.Value;
+            }, 
+            value: editSelectedCourse"></select>
+    </div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.SuperAdministrator)</div>
+    <div class="col_3 value">
+        <input type="checkbox" disabled data-bind="checked: entity().SuperAdministrator"/>
+    </div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Administrator)</div>
+    <div class="col_3 value">
+        <input type="checkbox" disabled data-bind="checked: entity().Administrator"/>
+    </div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Moderator)</div>
+    <div class="col_3 value">
+        <input type="checkbox" disabled data-bind="checked: entity().Moderator"/>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@using SOPS.WebUI.Areas.Administration.ViewModels.Students;
+@model Tuple<StudentViewModel, ContractViewModel>
+
+@{
+    ViewBag.Title = "Umowa";
+}
+<h2>Umowa</h2>
+   
+<div id="contract-view" class="row">
+    <div class="row">
+        <div class="col_5" id="student-details">
+            @Html.Partial("Partials/_contractStudentDetails", Model.Item1)
+        </div>
+        <div class="col_7 last" id="contract-edit">
+            @Html.Partial("Partials/_contractEdit", Model.Item2)
+        </div>
+    </div>
+    <div class="row padding_top_30 padding_bottom_30">
+        @using (Html.BeginForm("Download", "Students", FormMethod.Post))
+        {
+            <input type="hidden" name="id" value="@Model.Item1.Id"/>
+            <button id="contract" class="indigo" type="submit" >
+                    <i class="icon-cloud-download icon-4"></i><span/>Pobierz                                              
+            </button>
+            
+            @Html.ActionLink("<< Powrót","Index")
+        }
+    </div>
+</div>
+
+@section dialogs
+{
+    @Html.Partial("Dialogs/add-company-dialog", new SOPS.WebUI.Areas.Administration.ViewModels.Companies.CompanyViewModel())
+}
+
+@section scripts
+{
+    <script type="text/javascript" src="/Scripts/custom/widgets.js"></script>
+    <script type="text/javascript" src="/Scripts/views/contract-view.js"></script>
+}

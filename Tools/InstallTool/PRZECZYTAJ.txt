@@ -1,0 +1,8 @@
+﻿Ten program służy do inicjalizacji danych w bazie. Jego celem jest stworzenie użytkownika root posiadającego najwyższe uprawnienia administracyjne, który potem może dodać kolejnych użytkowników.
+
+Gdy instalacja zostanie ukończona, możliwe jest zalogowanie się do systemu wykorzystując wskazane dane.
+Stworzony użytkownik domyślnie nie jest opiekunem praktyk. By go nim uczynić, po zalogowaniu trzeba się udać do strony uczelnia, odnaleźć wybrany kierunek i w nim wybrać stworzonego użytkownika i zapisać.
+
+W katalogu Data znajduje się plik XML w którym można dodać wydziały i kierunki które zostaną użyte podczas instalacji.
+Znajduje się tam również plik studenci.txt z przykładowymi danymi studentów które można zaimportować z poziomu systemu
+Umowa.docx to przykład poprawnego dokumentu szablonu, który może zostać wgrany do systemu i wykorzystany do generowania umów.

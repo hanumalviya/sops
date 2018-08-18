@@ -1,0 +1,15 @@
+﻿<div class="toolbar row">
+    <input type="search" placeholder="szukaj" name="search" data-bind="value: searchText, valueUpdate: 'afterkeydown'"/>
+    <button class="blue" data-bind="click: showImportStudentsDialog">
+          <i class="icon-cloud-upload icon-large"></i> Import        
+    </button>
+     <button class="green"  data-bind="click: showAddStudentDialog">
+          <i class="icon-plus icon-large"></i> Dodaj        
+    </button>
+    <button class="orange" data-bind="click: showEditStudentDialog, enable: anyStudent">
+          <i class="icon-edit icon-large"></i> Edytuj        
+    </button>
+    <button class="red" data-bind="click: showRemoveStudentDialog, enable: anyStudent">
+          <i class=" icon-remove icon-large"></i> Usuń        
+    </button>
+</div>

@@ -1,0 +1,27 @@
+﻿@model SOPS.WebUI.Areas.Administration.ViewModels.University.DepartmentViewModel
+
+<li class="row">
+    <h4 class="col_5">@Model.Name</h4>
+    <div class="col_3 actions">
+        <button name="add" class="green" data-itemid="@Model.Id" data-bind="click: addCourse">
+            <i class="icon-plus icon-large"></i> Dodaj  
+        </button>
+        <button name="edit" class="orange" data-itemid="@Model.Id" data-name="@Model.Name" data-bind="click: editDepartment">
+            <i class="icon-edit icon-large"></i> Edytuj 
+        </button>
+        @if (ViewBag.CanBeDestroyed)
+        {
+            <button name="delete" class="red" data-itemid="@Model.Id" data-bind="click: removeDepartment">
+                <i class=" icon-remove icon-large"></i> Usuń  
+            </button>
+        }        
+    </div>
+    <ul class="row padding_top_15 padding_bottom_30">
+        @{
+            foreach(var course in Model.Courses)
+            {
+                Html.RenderAction("EditCoursePartial", course);
+            }
+        }
+    </ul>
+</li>

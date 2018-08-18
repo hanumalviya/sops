@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Firmy";
+}
+
+<h2>Firmy</h2>
+
+<div id="practices-view" class="row paged-list-view">
+    <div class="row">
+        @Html.Partial("Partials/_search", (string)ViewBag.Search)
+    </div>
+    <div class="row gridContainer" >
+        @Html.Action("Grid", "Company", new { search = ViewBag.Search, pageIndex = ViewBag.PageIndex})
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript" src="/Scripts/views/company-view.js"></script>
+    <script type="text/javascript" src="/Scripts/custom/widgets.js"></script>
+}

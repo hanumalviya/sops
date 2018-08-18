@@ -1,0 +1,23 @@
+﻿@using SOPS.WebUI.Areas.Administration.ViewModels.University
+@model CourseViewModel
+
+<div id="add-course-dialog" class="dialog"
+    data-bind="jqDialog: { resizable: false, autoOpen: false, modal: true, width: 600, title: 'Kierunek - dodawanie' },  dialogVisible: isAddCourseDialogOpen">
+    @using (Html.BeginForm("AddCourse", "University", FormMethod.Post, new { id = "addCourseForm"}))
+    {
+        @Html.HiddenFor(m => m.Keeper)
+        <input type="hidden" name="Id" value="0"/>
+        <input type="hidden" name="DepartmentId" data-bind="value: departmentId"/>
+        <input type="hidden" name="Template" />
+        <div class="add-message"></div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Name)</div>
+            <div class="name">@Html.LabelFor(m => m.Name)</div>
+            <div class="value">@Html.EditorFor(m => m.Name, new { id = (object)null  })</div>
+        </div>
+        <div class="buttons">
+            <input type="submit" class="green" value="Zapisz"/>
+            <input type="button" value="Anuluj" data-bind="click: closeAddCourseDialog"/>
+        </div>
+    }
+</div>

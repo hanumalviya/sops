@@ -1,0 +1,48 @@
+﻿@model SOPS.WebUI.Areas.Administration.ViewModels.Account.UpdateProfileViewModel
+
+<div class="row">
+    <h2 class="pre_2 col_2">Zarządzanie</h2>
+</div>
+
+@using (Html.BeginForm("UpdateProfile", "Account", FormMethod.Post, new {@class = "pre_2 col_10 last"}))
+{
+    <div class="row">
+        @Html.ValidationSummary()
+    </div>
+    @Html.HiddenFor(m => m.UserId)
+    <div class="row">
+        <div class="col_2">
+            @Html.LabelFor(model => model.UserName)
+        </div>
+        <div class="col_3">
+             @Html.EditorFor(model => model.UserName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col_2">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="col_3">
+            @Html.EditorFor(model => model.Email)
+        </div>
+        <div class="col_4 last">
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col_2">
+            @Html.LabelFor(model => model.IsLockedOut)
+        </div>
+        <div class="col_3">
+            @Html.EditorFor(model => model.IsLockedOut)
+        </div>
+        <div class="col_4 last">
+            @Html.ValidationMessageFor(model => model.IsLockedOut)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col_2 pre_4">
+            <input type="submit" value="Zapisz"/>
+        </div>
+    </div>
+}

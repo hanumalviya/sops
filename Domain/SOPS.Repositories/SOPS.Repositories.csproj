@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A12A6599-6C13-4504-A2B6-E2138840DF85}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SOPS.Repositories</RootNamespace>
+    <AssemblyName>SOPS.Repositories</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\packages\NHibernate.3.3.2.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database.cs" />
+    <Compile Include="Factory\IRepositoriesFactory.cs" />
+    <Compile Include="Factory\RepositoriesFactory.cs" />
+    <Compile Include="Mappings\CompanyMap.cs" />
+    <Compile Include="Mappings\ContractMap.cs" />
+    <Compile Include="Mappings\DocumentMap.cs" />
+    <Compile Include="Mappings\CourseMap.cs" />
+    <Compile Include="Mappings\DepartmentMap.cs" />
+    <Compile Include="Mappings\EmployeeMap.cs" />
+    <Compile Include="Mappings\ModeMap.cs" />
+    <Compile Include="Mappings\OfferMap.cs" />
+    <Compile Include="Mappings\OfferTypeMap.cs" />
+    <Compile Include="Mappings\StudentMap.cs" />
+    <Compile Include="Mappings\TemplateMap.cs" />
+    <Compile Include="Mappings\UniversityMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Abstract\IModeRepository.cs" />
+    <Compile Include="Abstract\IDepartmentRepository.cs" />
+    <Compile Include="Abstract\ICourseRepository.cs" />
+    <Compile Include="Abstract\IUniversityRepository.cs" />
+    <Compile Include="Abstract\ITemplateRepository.cs" />
+    <Compile Include="Abstract\IDocumentRepository.cs" />
+    <Compile Include="Abstract\IStudentRepository.cs" />
+    <Compile Include="Abstract\IContractRepository.cs" />
+    <Compile Include="Abstract\IOfferTypeRepository.cs" />
+    <Compile Include="Abstract\IOfferRepository.cs" />
+    <Compile Include="Abstract\IEmployeeRepository.cs" />
+    <Compile Include="Abstract\ICompanyRepository.cs" />
+    <Compile Include="Implementation\CompanyRepository.cs" />
+    <Compile Include="Implementation\ContractRepository.cs" />
+    <Compile Include="Implementation\CourseRepository.cs" />
+    <Compile Include="Implementation\DepartmentRepository.cs" />
+    <Compile Include="Implementation\DocumentRepository.cs" />
+    <Compile Include="Implementation\EmployeeRepository.cs" />
+    <Compile Include="Implementation\ModeRepository.cs" />
+    <Compile Include="Implementation\OfferRepository.cs" />
+    <Compile Include="Implementation\OfferTypeRepository.cs" />
+    <Compile Include="Implementation\StudentRepository.cs" />
+    <Compile Include="Implementation\TemplateRepository.cs" />
+    <Compile Include="Implementation\UniversityRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Repositories\NHibernateRepository\NHibernateRepository.csproj">
+      <Project>{c21ccf4a-27c1-46e6-9a8b-634b89c87c91}</Project>
+      <Name>NHibernateRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOPS.Model\SOPS.Model.csproj">
+      <Project>{c61de1ed-34c9-459e-91c3-2132c5f1c980}</Project>
+      <Name>SOPS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

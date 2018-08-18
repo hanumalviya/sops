@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Nieodnaleziono strony";
+}
+
+<h1>Nieodnaleziono strony</h1>
+<p>Nieodnaleziono strony: @ViewBag.RequestedUrl</p>
+@if (ViewBag.ReferrerUrl != null) {
+<p>Wróć do  <a href="@ViewBag.ReferrerUrl">poprzedniej strony</a>.</p>
+}
+
+@* Error page must be longer than 512 bytes for IE and Chrome to show it. 
+   So add padding in case we're short. *@
+@(new string(' ', 512))

@@ -1,0 +1,55 @@
+﻿@using SOPS.WebUI.Areas.Administration.ViewModels.Companies
+@model CompanyViewModel
+
+<div id="edit-offer-dialog" class="dialog" 
+    data-bind="jqDialog: { resizable: false, autoOpen: false, modal: true, width: 600, title: 'Firma - edycja' },  dialogVisible: isEditDialogOpen">
+    @using (Html.BeginForm("Edit", "Companies", FormMethod.Post, new { id = "editForm", data_bind = "submit: submitEditDialog" }))
+    {
+        <input type="hidden" name="Id" data-bind="value: entity().Id"/>
+        <div class="edit-message"></div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Name)</div>
+            <div class="name">@Html.LabelFor(m => m.Name)</div>
+            <div class="value"><input type="text" name="Name" data-bind="value: entity().Name" /></div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Url)</div>
+            <div class="name">@Html.LabelFor(m => m.Url)</div>
+            <div class="value"><input type="url" name="Url" data-bind="value: entity().Url" /></div>
+        </div>
+        <div class="property">
+            <div class="name">@Html.LabelFor(m => m.Street)</div>
+            <div class="value"><input type="text" name="Street" data-bind="value: entity().Street" /></div>
+        </div>
+        <div class="property">
+            <div class="name">@Html.LabelFor(m => m.City)</div>
+            <div class="value"><input type="text" name="City" data-bind="value: entity().City" /></div>
+        </div>
+        <div class="property">
+            <div class="name">@Html.LabelFor(m => m.PostalCode)</div>
+            <div class="value"><input type="text" name="PostalCode" data-bind="value: entity().PostalCode" /></div>
+        </div>
+        <div class="property">
+            <div class="name">@Html.LabelFor(m => m.Email)</div>
+            <div class="value"><input type="text" name="Email" data-bind="value: entity().Email" /></div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Phone)</div>
+            <div class="name">@Html.LabelFor(m => m.Phone)</div>
+           <div class="value"><input type="tel" name="Phone" data-bind="value: entity().Phone" /></div>
+        </div>
+        <div class="property">
+            <div class="name">@Html.LabelFor(m => m.Description)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Description)</div>
+            <div class="fullLine">
+                <textarea id="Description" name="Description" data-bind="value: entity().Description"> </textarea>
+            </div>
+        </div>
+        <div class="buttons">
+            <input type="submit" class="orange" value="Zapisz"/>
+            <input type="button" value="Anuluj" data-bind="click: closeEditDialog"/>
+        </div>
+    }
+</div>

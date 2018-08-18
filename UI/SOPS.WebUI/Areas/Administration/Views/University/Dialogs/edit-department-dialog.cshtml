@@ -1,0 +1,19 @@
+﻿@model SOPS.WebUI.Areas.Administration.ViewModels.University.DepartmentViewModel
+
+<div id="edit-department-dialog" class="dialog"
+    data-bind="jqDialog: { resizable: false, autoOpen: false, modal: true, width: 600, title: 'Wydział - edycja' },  dialogVisible: isEditDepartmentDialogOpen">
+    @using (Html.BeginForm("EditDepartment", "University", FormMethod.Post, new { id = "editDepartmentForm"}))
+    {
+        <input type="hidden" name="Id" data-bind="value: departmentId" />
+        <div class="edit-message"></div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Name)</div>
+            <div class="name">@Html.LabelFor(m => m.Name)</div>
+            <div class="value"><input type="text" name="Name" required data-bind="value: deparmentName"/></div>
+        </div>
+        <div class="buttons">
+            <input type="submit" class="green" value="Zapisz"/>
+            <input type="button" value="Anuluj" data-bind="click: closeEditDepartmentDialog"/>
+        </div>
+    }
+</div>

@@ -1,0 +1,9 @@
+﻿@model SOPS.WebUI.ViewModels.Companies.ListItemViewModel
+
+<div>
+    <div class="title"><strong>@Model.Company</strong></div>
+    <div>
+        <div class="details right">@Html.ActionLink("Szczegóły", "Details", "Company", new { id = Model.Id}, null)</div>
+        <div class="clearboth"></div>
+    </div>
+</div>

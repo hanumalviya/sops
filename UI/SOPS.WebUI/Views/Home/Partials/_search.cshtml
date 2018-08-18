@@ -1,0 +1,9 @@
+﻿<div class="row col_8 last pre_1">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { @class = "search-box"}))
+    {
+        <div class="col_8">
+            <input type="search" placeholder="szukaj" name="search" value="@ViewBag.Search"/>
+            <input type="submit" value="Szukaj" class="blue"/>
+        </div>
+    }
+</div>

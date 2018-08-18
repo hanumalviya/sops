@@ -1,0 +1,39 @@
+﻿@model SOPS.WebUI.Areas.Administration.ViewModels.Companies.CompanyViewModel
+
+<h4 class="row">
+    Szczegóły firmy
+</h4>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Name)</div>
+    <div class="col_3 value" data-bind="text: entity().Name"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Url)</div>
+    <div class="col_3 value"><a data-bind="attr: { href: entity().Url }, text: entity().Url"></a></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Street)</div>
+    <div class="col_3 value" data-bind="text: entity().Street"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.City)</div>
+    <div class="col_3 value" data-bind="text: entity().City"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.PostalCode)</div>
+    <div class="col_3 value" data-bind="text: entity().PostalCode"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Email)</div>
+    <div class="col_3 value" data-bind="text: entity().Email"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Phone)</div>
+    <div class="col_3 value" data-bind="text: entity().Phone"></div>
+</div>
+<div class="row property">
+    <div class="col_2 name">@Html.LabelFor(m => m.Description)</div>
+</div>
+<div class="row property">
+    <div class="col_5 value" data-bind="text: entity().Description"></div>
+</div>

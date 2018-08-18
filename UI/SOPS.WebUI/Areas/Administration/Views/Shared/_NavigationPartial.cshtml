@@ -1,0 +1,12 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <ul>
+        <li>@Html.ActionLink("studenci", "Index", "Students")</li>
+        <li>@Html.ActionLink("oferty", "Index", "Offers")</li>
+        <li>@Html.ActionLink("Firmy", "Index", "Companies")</li>
+        <li>@Html.ActionLink("Pracownicy", "Index", "Employees")</li>
+        <li>@Html.ActionLink("Uczelnia", "Index", "University")</li>
+        <li>@Html.ActionLink("System", "Index", "System")</li>
+        <li>@Html.ActionLink("Konto", "Manage", "Account")</li>
+    </ul>
+}

@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountController_Login_SomethingGoesWrong" xml:space="preserve">
+    <value>Coś poszło nie tak spróbuj jeszcze raz.</value>
+  </data>
+  <data name="AccountController_Login_UserNotExist" xml:space="preserve">
+    <value>Podana nazwa użytkownika bądź hasło są nieprawidłowe</value>
+  </data>
+  <data name="ChangePasswordViewModel_CurrentPassword" xml:space="preserve">
+    <value>Bieżące hasło</value>
+  </data>
+  <data name="ChangePasswordViewModel_NewPassword" xml:space="preserve">
+    <value>Nowe hasło</value>
+  </data>
+  <data name="ChangePasswordViewModel_PasswordAnswer" xml:space="preserve">
+    <value>Odpowiedź</value>
+  </data>
+  <data name="ChangePasswordViewModel_PasswordAnswerConfirm" xml:space="preserve">
+    <value>Powtórz odpowiedź</value>
+  </data>
+  <data name="ChangePasswordViewModel_PasswordConfirm" xml:space="preserve">
+    <value>Powtórz hasło</value>
+  </data>
+  <data name="ChangePasswordViewModel_PasswordQuestion" xml:space="preserve">
+    <value>Pytanie</value>
+  </data>
+  <data name="CompanyViewModel_City" xml:space="preserve">
+    <value>Miasto</value>
+  </data>
+  <data name="CompanyViewModel_Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="CompanyViewModel_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="CompanyViewModel_Name" xml:space="preserve">
+    <value>Nazwa firmy</value>
+  </data>
+  <data name="CompanyViewModel_Phone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="CompanyViewModel_PostalCode" xml:space="preserve">
+    <value>Kod pocztowy</value>
+  </data>
+  <data name="CompanyViewModel_Street" xml:space="preserve">
+    <value>Ulica</value>
+  </data>
+  <data name="CompanyViewModel_Url" xml:space="preserve">
+    <value>Adres www</value>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>Wprowadzone wartości są od siebie różne</value>
+  </data>
+  <data name="ContractViewModel_City" xml:space="preserve">
+    <value>Miasto</value>
+  </data>
+  <data name="ContractViewModel_CompanyId" xml:space="preserve">
+    <value>Firma</value>
+  </data>
+  <data name="ContractViewModel_CompanyRepresentative" xml:space="preserve">
+    <value>Opiektun ze strony firmy</value>
+  </data>
+  <data name="ContractViewModel_EndDate" xml:space="preserve">
+    <value>Data zakończenia praktyk</value>
+  </data>
+  <data name="ContractViewModel_PostalCode" xml:space="preserve">
+    <value>Kod pocztowy</value>
+  </data>
+  <data name="ContractViewModel_StartDate" xml:space="preserve">
+    <value>Data rozpoczęcia praktyk</value>
+  </data>
+  <data name="ContractViewModel_Street" xml:space="preserve">
+    <value>Ulica</value>
+  </data>
+  <data name="ContractViewModel_UniversityRepresentative" xml:space="preserve">
+    <value>Opiekun ze strony uczelni</value>
+  </data>
+  <data name="CourseViewModel_Keeper" xml:space="preserve">
+    <value>Opiekun</value>
+  </data>
+  <data name="CourseViewModel_Name" xml:space="preserve">
+    <value>Nazwa kierunku</value>
+  </data>
+  <data name="CourseViewModel_Template" xml:space="preserve">
+    <value>Szablon umowy</value>
+  </data>
+  <data name="CreateEmployeeViewModel_Administrator" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="CreateEmployeeViewModel_Answer" xml:space="preserve">
+    <value>Odpowiedź</value>
+  </data>
+  <data name="CreateEmployeeViewModel_AnswerConfirm" xml:space="preserve">
+    <value>Powtórz odpowiedź</value>
+  </data>
+  <data name="CreateEmployeeViewModel_Course" xml:space="preserve">
+    <value>Kierunek</value>
+  </data>
+  <data name="CreateEmployeeViewModel_Department" xml:space="preserve">
+    <value>Wydział</value>
+  </data>
+  <data name="CreateEmployeeViewModel_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="CreateEmployeeViewModel_FirstName" xml:space="preserve">
+    <value>Imię</value>
+  </data>
+  <data name="CreateEmployeeViewModel_Keeper" xml:space="preserve">
+    <value>Opiekun</value>
+  </data>
+  <data name="CreateEmployeeViewModel_LastName" xml:space="preserve">
+    <value>Nazwisko</value>
+  </data>
+  <data name="CreateEmployeeViewModel_LockedOut" xml:space="preserve">
+    <value>Zablokowany</value>
+  </data>
+  <data name="CreateEmployeeViewModel_Moderator" xml:space="preserve">
+    <value>Moderator</value>
+  </data>
+  <data name="CreateEmployeeViewModel_Password" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="CreateEmployeeViewModel_PasswordConfirm" xml:space="preserve">
+    <value>Potwierdzenie hasła</value>
+  </data>
+  <data name="CreateEmployeeViewModel_Question" xml:space="preserve">
+    <value>Pytanie</value>
+  </data>
+  <data name="CreateEmployeeViewModel_SuperAdministrator" xml:space="preserve">
+    <value>Super administrator</value>
+  </data>
+  <data name="CreateEmployeeViewModel_UserName" xml:space="preserve">
+    <value>Nazwa użytkownika</value>
+  </data>
+  <data name="DepartmentViewModel_Name" xml:space="preserve">
+    <value>Nazwa wydziału</value>
+  </data>
+  <data name="EmployeeViewModel_Administrator" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="EmployeeViewModel_Course" xml:space="preserve">
+    <value>Kierunek</value>
+  </data>
+  <data name="EmployeeViewModel_Department" xml:space="preserve">
+    <value>Wydział</value>
+  </data>
+  <data name="EmployeeViewModel_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmployeeViewModel_FirstName" xml:space="preserve">
+    <value>Imię</value>
+  </data>
+  <data name="EmployeeViewModel_Keeper" xml:space="preserve">
+    <value>Opiekun</value>
+  </data>
+  <data name="EmployeeViewModel_LastName" xml:space="preserve">
+    <value>Nazwisko</value>
+  </data>
+  <data name="EmployeeViewModel_LockedOut" xml:space="preserve">
+    <value>Zablokowany</value>
+  </data>
+  <data name="EmployeeViewModel_Moderator" xml:space="preserve">
+    <value>Moderator</value>
+  </data>
+  <data name="EmployeeViewModel_Role" xml:space="preserve">
+    <value>Rola</value>
+  </data>
+  <data name="EmployeeViewModel_SuperAdministrator" xml:space="preserve">
+    <value>Super administrator</value>
+  </data>
+  <data name="LoginViewModel_Password" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="LoginViewModel_Remember" xml:space="preserve">
+    <value>Zapamiętaj mnie</value>
+  </data>
+  <data name="LoginViewModel_UserName" xml:space="preserve">
+    <value>Nazwa użytkownika</value>
+  </data>
+  <data name="MinLength" xml:space="preserve">
+    <value>Minimalna ilość znaków {1}</value>
+  </data>
+  <data name="OfferViewModel_Approved" xml:space="preserve">
+    <value>Zatwierdzono</value>
+  </data>
+  <data name="OfferViewModel_Company" xml:space="preserve">
+    <value>Nazwa firmy</value>
+  </data>
+  <data name="OfferViewModel_Date" xml:space="preserve">
+    <value>Data dodania</value>
+  </data>
+  <data name="OfferViewModel_Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="OfferViewModel_Title" xml:space="preserve">
+    <value>Tytuł oferty</value>
+  </data>
+  <data name="OfferViewModel_Trade" xml:space="preserve">
+    <value>Branża</value>
+  </data>
+  <data name="OfferViewModel_Type" xml:space="preserve">
+    <value>Rodzaj oferty</value>
+  </data>
+  <data name="RegisterViewModel_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="RegisterViewModel_FirstName" xml:space="preserve">
+    <value>Imię</value>
+  </data>
+  <data name="RegisterViewModel_LastName" xml:space="preserve">
+    <value>Nazwisko</value>
+  </data>
+  <data name="RegisterViewModel_Password" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="RegisterViewModel_PasswordAnswer" xml:space="preserve">
+    <value>Odpowiedź</value>
+  </data>
+  <data name="RegisterViewModel_PasswordAnswerConfirm" xml:space="preserve">
+    <value>Powtórz odpowiedź</value>
+  </data>
+  <data name="RegisterViewModel_PasswordConfirm" xml:space="preserve">
+    <value>Powtórz hasło</value>
+  </data>
+  <data name="RegisterViewModel_PasswordQuestion" xml:space="preserve">
+    <value>Pytanie pomocnicze</value>
+  </data>
+  <data name="RegisterViewModel_UserName" xml:space="preserve">
+    <value>Nazwa użytkownika</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Pole {0} jest wymagane</value>
+  </data>
+  <data name="ResetPasswordViewModel_PasswordAnswer" xml:space="preserve">
+    <value>Odpowiedź</value>
+  </data>
+  <data name="StudentViewModel_Album" xml:space="preserve">
+    <value>Numer albumu</value>
+  </data>
+  <data name="StudentViewModel_City" xml:space="preserve">
+    <value>Miasto</value>
+  </data>
+  <data name="StudentViewModel_Course" xml:space="preserve">
+    <value>Kierunek</value>
+  </data>
+  <data name="StudentViewModel_Department" xml:space="preserve">
+    <value>Wydział</value>
+  </data>
+  <data name="StudentViewModel_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="StudentViewModel_LastName" xml:space="preserve">
+    <value>Nazwisko</value>
+  </data>
+  <data name="StudentViewModel_Mode" xml:space="preserve">
+    <value>Tryb studiów</value>
+  </data>
+  <data name="StudentViewModel_Name" xml:space="preserve">
+    <value>Imię</value>
+  </data>
+  <data name="StudentViewModel_Phone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="StudentViewModel_PostalCode" xml:space="preserve">
+    <value>Kod pocztowy</value>
+  </data>
+  <data name="StudentViewModel_Specialization" xml:space="preserve">
+    <value>Specjalizacja</value>
+  </data>
+  <data name="StudentViewModel_Street" xml:space="preserve">
+    <value>Ulica</value>
+  </data>
+  <data name="UniversityViewModel_Address" xml:space="preserve">
+    <value>Adres uczelni</value>
+  </data>
+  <data name="UniversityViewModel_Name" xml:space="preserve">
+    <value>Nazwa uczelni</value>
+  </data>
+  <data name="UpdateProfileViewModel_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="UpdateProfileViewModel_IsLockedOut" xml:space="preserve">
+    <value>Zablokowany</value>
+  </data>
+  <data name="UpdateProfileViewModel_LastName" xml:space="preserve">
+    <value>Nazwisko</value>
+  </data>
+  <data name="UpdateProfileViewModel_UserName" xml:space="preserve">
+    <value>Nazwa użytkownika</value>
+  </data>
+</root>

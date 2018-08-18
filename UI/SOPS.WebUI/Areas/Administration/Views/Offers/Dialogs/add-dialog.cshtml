@@ -1,0 +1,44 @@
+﻿@using SOPS.WebUI.Areas.Administration.ViewModels.Offers
+@model OfferViewModel
+
+<div id="add-offer-dialog" class="dialog"
+    data-bind="jqDialog: { resizable: false, autoOpen: false, modal: true, width: 600, title: 'Oferta - dodawanie' },  dialogVisible: isAddDialogOpen">
+    @using (Html.BeginForm("Add", "Offers", FormMethod.Post, new { id = "addForm", data_bind = "submit: submitAddDialog"}))
+    {
+        @Html.HiddenFor(m => m.Id)
+        @Html.HiddenFor(m => m.Date)
+        @Html.HiddenFor(m => m.Approved)
+        <div class="add-message"></div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Title)</div>
+            <div class="name">@Html.LabelFor(m => m.Title)</div>
+            <div class="value">@Html.EditorFor(m => m.Title)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Type)</div>
+            <div class="name">@Html.LabelFor(m => m.Type)</div>
+            <div class="value">@Html.DropDownListFor(m => m.Type, new SelectList(ViewBag.Type, "Value", "Text", Model.Type))</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Company)</div>
+            <div class="name">@Html.LabelFor(m => m.Company)</div>
+            <div class="value">@Html.DropDownListFor(m => m.Company, new SelectList(ViewBag.Company, "Value", "Text", Model.Company))</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Trade)</div>
+            <div class="name">@Html.LabelFor(m => m.Trade)</div>
+            <div class="value">@Html.EditorFor(m => m.Trade)</div>
+        </div>
+        <div class="property">
+            <div class=" name">@Html.LabelFor(m => m.Description)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Description)</div>
+            <div class="fullLine">@Html.EditorFor(m => m.Description)</div>
+        </div>
+        <div class="buttons">
+            <input type="submit" class="green" value="Zapisz"/>
+            <input type="button" value="Anuluj" data-bind="click: closeAddDialog"/>
+        </div>
+    }
+</div>

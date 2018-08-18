@@ -1,0 +1,27 @@
+// in system.web
+
+<membership defaultProvider="NHMembershipProvider">
+    <providers>
+    <add name="NHMembershipProvider" type="NHMembership.Membership.Provider.NHMembershipProvider, NHMembership" connectionStringName="DefaultConnection" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="false" requiresUniqueEmail="false" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="6" minRequiredNonalphanumericCharacters="0" passwordAttemptWindow="10" applicationName="/" />
+    </providers>
+</membership>
+<roleManager defaultProvider="NHRoleProvider" enabled="true">
+    <providers>
+    <add name="NHRoleProvider" type="NHMembership.Roles.Provider.NHRoleProvider, NHMembership, Version=1.0.0.0, Culture=neutral" connectionStringName="DefaultConnection" applicationName="/" />
+    </providers>
+</roleManager>
+
+
+// in code
+
+string applicationName = "integrationTests";
+
+var logger = new Mock<ILogger>();
+logger.Setup(n => n.Log(It.IsAny<string>(), It.IsAny<Exception>()))
+        .Callback((string s, Exception e) => Console.WriteLine("{0} {1}", s, e));
+
+IPersistenceConfigurer persistenceConfigurer =
+    MsSqlConfiguration.MsSql2008.ConnectionString(c => c.FromConnectionStringWithKey("DefaultConnection"));
+
+IAuthenticationService service = new FormsAuthenticationService(applicationName, new ClearTextStrategy(), logger.Object, persistenceConfigurer);
+service.Configure();

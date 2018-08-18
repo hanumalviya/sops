@@ -1,0 +1,45 @@
+﻿@model SOPS.WebUI.Areas.Administration.ViewModels.Students.ContractViewModel
+
+<h4 class="row">
+    Szczegóły umowy
+</h4>
+
+@using (Html.BeginForm("ContractUpdate", "Students", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.Id);
+    <div class="property">
+        <div class="validation">@Html.ValidationMessageFor(m => m.CompanyId)</div>
+        <div class="col_3 name">@Html.LabelFor(m => m.CompanyId)</div>
+        <div class="col_2 value">@Html.DropDownListFor(m => m.CompanyId, new SelectList(ViewBag.Company, "Value", "Text", Model.CompanyId))</div>
+        <div class="col_1 last value">
+                 <button class="green"  data-bind="click: showAddCompanyDialog">
+                      <i class="icon-plus icon-large"></i> Dodaj        
+                </button>
+        </div>
+    </div>
+    <div class="row property">
+        <div class="validation">@Html.ValidationMessageFor(m => m.CompanyRepresentative)</div>
+        <div class="col_3 name">@Html.LabelFor(m => m.CompanyRepresentative)</div>
+        <div class="col_3 value">@Html.EditorFor(m => m.CompanyRepresentative)</div>
+    </div>
+    <div class="row property">
+        <div class="validation">@Html.ValidationMessageFor(m => m.UniversityRepresentative)</div>
+        <div class="col_3 name">@Html.LabelFor(m => m.UniversityRepresentative)</div>
+        <div class="col_3 value">@Html.EditorFor(m => m.UniversityRepresentative)</div>
+    </div>
+    <div class="row property">
+        <div class="validation">@Html.ValidationMessageFor(m => m.StartDate)</div>
+        <div class="col_3 name">@Html.LabelFor(m => m.StartDate)</div>
+        <div class="col_3 value">@Html.EditorFor(m => m.StartDate)</div>
+    </div>
+    <div class="row property">
+        <div class="validation">@Html.ValidationMessageFor(m => m.EndDate)</div>
+        <div class="col_3 name">@Html.LabelFor(m => m.EndDate)</div>
+        <div class="col_3 value">@Html.EditorFor(m => m.EndDate)</div>
+    </div>
+    <div class="row property">
+        <div class="pre_5 col_1">
+            <input type="submit" class="orange" value="Zapisz"/>
+        </div>
+    </div>
+}

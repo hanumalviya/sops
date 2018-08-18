@@ -1,0 +1,42 @@
+﻿@model SOPS.WebUI.ViewModels.Practices.OfferViewModel
+
+@{
+    ViewBag.Title = "Szczegóły";
+}
+<h2>@Model.Title</h2>
+<div id="offer-details-view" class="details-view">
+    <div class="row property">
+        <div class="col_2">
+            <strong>Nazwa firmy</strong>
+        </div>
+        <div class="col_2">
+            @Html.ActionLink(Model.CompanyName, "Details", "Company", new { id = Model.CompanyId }, null)
+        </div>
+    </div>
+    <div class="row property">
+        <div class="col_2">
+            <strong>Data dodania</strong>
+        </div>
+        <div class="col_2">
+            @Model.Date
+        </div>
+    </div>
+    <div class="row property">
+        <div class="col_2">
+            <strong>Rodzaj oferty</strong>
+        </div>
+        <div class="col_2">
+            @Model.Type
+        </div>
+    </div>
+    <div class="row property">
+        <div class="col_2">
+            <strong>Opis</strong>
+        </div>
+    </div>
+    <div class="row property">
+        <div class="col_8">
+            @Model.Description
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+﻿@using SOPS.WebUI.Areas.Administration.ViewModels.Students
+@model StudentViewModel
+
+<div id="edit-student-dialog" class="dialog" 
+    data-bind="jqDialog: { resizable: false, autoOpen: false, modal: true, width: 600, title: 'Student - edycja' },  dialogVisible: isEditStudentDialogOpen">
+    @using (Html.BeginForm("Edit", "Students", FormMethod.Post, new { id = "editStudentForm", data_bind = "submit: submitEditStudentDialog" }))
+    {
+        <input type="hidden" name="Id" data-bind="value: student().Id"/>
+        <input type="hidden" name="Course" data-bind="value: student().Course"/>
+        <input type="hidden" name="Department" data-bind="value: student().Department"/>
+        <div class="edit-message"></div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Name)</div>
+            <div class="name">@Html.LabelFor(m => m.Name)</div>
+            <div class="value"><input type="text" name="Name" required data-bind="value: student().Name" /></div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.LastName)</div>
+            <div class="name">@Html.LabelFor(m => m.LastName)</div>
+            <div class="value"><input type="text" name="LastName" required data-bind="value: student().LastName" /></div>
+        </div>
+        <div class="property">
+            <div class="name">@Html.LabelFor(m => m.Department)</div>
+            <div class="value"><input type="text" disabled data-bind="value: student().Department" /></div>
+        </div>
+        <div class="property">
+            <div class="name">@Html.LabelFor(m => m.Course)</div>
+            <div class="value"><input type="text" disabled data-bind="value: student().Course" /></div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Mode)</div>
+            <div class="name">@Html.LabelFor(m => m.Mode)</div>
+            <div class="value">@Html.DropDownList("Mode", new SelectList(ViewBag.Mode, "Value", "Text"), new { data_bind="value: student().Mode" })</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Album)</div>
+            <div class=" name">@Html.LabelFor(m => m.Album)</div>
+            <div class="value"><input type="number" name="Album" required data-bind="value: student().Album" /></div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.City)</div>
+            <div class="name">@Html.LabelFor(m => m.City)</div>
+            <div class="value"><input type="text" name="City" data-bind="value: student().City" /></div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Street)</div>
+            <div class="name">@Html.LabelFor(m => m.Street)</div>
+            <div class="value"><input type="text" name="Street" data-bind="value: student().Street" /></div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.PostalCode)</div>
+            <div class="name">@Html.LabelFor(m => m.PostalCode)</div>
+            <div class="value"><input type="text" name="PostalCode" data-bind="value: student().PostalCode" /></div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Email)</div>
+            <div class="name">@Html.LabelFor(m => m.Email)</div>
+            <div class="value"><input type="email" name="Email" data-bind="value: student().Email" /></div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Phone)</div>
+            <div class="name">@Html.LabelFor(m => m.Phone)</div>
+            <div class="value"><input type="tel" name="Phone" data-bind="value: student().Phone" /></div>
+        </div>
+        <div class="buttons">
+            <input type="submit" class="orange" value="Zapisz"/>
+            <input type="button" value="Anuluj" data-bind="click: closeEditStudentDialog"/>
+        </div>
+    }
+</div>

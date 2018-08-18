@@ -1,0 +1,12 @@
+﻿<div class="toolbar row">
+    <input type="search" placeholder="szukaj" name="search" data-bind="value: searchText, valueUpdate: 'afterkeydown'"/>
+    <button class="green"  data-bind="click: showAddDialog">
+          <i class="icon-plus icon-large"></i> Dodaj        
+    </button>
+    <button class="orange" data-bind="click: showEditDialog, enable: listIsNotEmpty">
+          <i class="icon-edit icon-large"></i> Edytuj        
+    </button>
+    <button value="Usuń" class="red" data-bind="click: showRemoveDialog, enable: listIsNotEmpty">
+          <i class=" icon-remove icon-large"></i> Usuń        
+    </button>
+</div>

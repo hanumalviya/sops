@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sops>
+  <university>
+    <department name="Wydział Budowy Maszyn i Informatyki">
+      <course name="Mechanika i budowa maszyn">
+        <employees>
+          <employee name="jakub.nowak" manager="true" administrator="true" moderator="true"/>
+          <employee name="kacper.kowalski" manager="false" administrator="false" moderator="false"/>
+        </employees>
+        <students>
+        </students>
+      </course>
+      <course name="Zarządzanie i inżynieria produkcji">
+        <employees>
+          <employee name="szymon.wiśniewski" manager="true" administrator="true" moderator="true"/>
+          <employee name="mateusz.wójcik" manager="false" administrator="false" moderator="false"/>
+          <employee name="filip.kowalczyk" manager="false" administrator="false" moderator="true"/>
+        </employees>
+      </course>
+      <course name="Informatyka">
+        <employees>
+          <employee name="michał.kamiński" manager="true" administrator="true" moderator="true"/>
+          <employee name="bartosz.lewandowski" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+      <course name="Automatyka i robotyka">
+        <employees>
+          <employee name="wiktor.zieliński" manager="true" administrator="true" moderator="true"/>
+          <employee name="piotr.woźniak" manager="false" administrator="false" moderator="false"/>
+          <employee name="dawid.szymański" manager="false" administrator="true" moderator="false"/>
+        </employees>
+      </course>
+    </department>
+
+    <department name="Wydział Nauk o Materiałach i Środowisku">
+      <course name="Budownictwo">
+        <employees>
+          <employee name="adam.dąbrowski" manager="true" administrator="true" moderator="true"/>
+        </employees>
+      </course>
+      <course name="Włókiennictwo">
+        <employees>
+          <employee name="maciej.kozłowski" manager="true" administrator="true" moderator="true"/>
+        </employees>
+      </course>
+      <course name="Inżynieria środowiska">
+        <employees>
+          <employee name="jan.jankowski" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+      <course name="Ochrona środowiska">
+        <employees>
+          <employee name="igor.mazur" manager="true" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+    </department>
+
+    <department name="Wydział Zarządzania i Informatyki">
+      <course name="Zarządzanie">
+        <employees>
+          <employee name="mikołaj.kwiatkowski" manager="false" administrator="true" moderator="true"/>
+          <employee name="patryk.wojciechowski" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+      <course name="Stosunki międzynarodowe">
+        <employees>
+          <employee name="paweł.krawczyk" manager="true" administrator="true" moderator="true"/>
+          <employee name="dominik.kaczmarek" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+      <course name="Socjologia">
+        <employees>
+          <employee name="oskar.piotrowski" manager="true" administrator="true" moderator="true"/>
+          <employee name="antoni.grabowski" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+      <course name="Transport">
+        <employees>
+          <employee name="wojciech.zając" manager="true" administrator="true" moderator="true"/>
+          <employee name="kamil.pawłowski" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+    </department>
+
+    <department name="Wydział Humanistyczno-Społeczny">
+      <course name="Filologia angielska">
+        <employees>
+          <employee name="aleksander.król" manager="true" administrator="true" moderator="true"/>
+          <employee name="krzysztof.michalski" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+      <course name="Filologia hiszpańska">
+        <employees>
+          <employee name="oliwier.wróbel" manager="true" administrator="true" moderator="true"/>
+          <employee name="marcel.wieczorek" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+      <course name="Filologia słowiańska">
+        <employees>
+          <employee name="tomasz.majewski" manager="true" administrator="true" moderator="true"/>
+          <employee name="maksymilian.olszewski" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+      <course name="Translacja angielsko-rosyjsko-polska">
+        <employees>
+          <employee name="hubert.stępień" manager="true" administrator="true" moderator="true"/>
+          <employee name="bartłomiej.dudek" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+      <course name="Pedagogika">
+        <employees>
+          <employee name="adrian.jaworski" manager="true" administrator="true" moderator="true"/>
+          <employee name="alan.malinowski" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+      <course name="Filologia polska">
+        <employees>
+          <employee name="sebastian.adamczyk" manager="true" administrator="true" moderator="true"/>
+          <employee name="miłosz.pawlak" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+    </department>
+    
+    <department name="Wydział Nauk o Zdrowiu">
+      <course name="Pielęgniarstwo">
+        <employees>
+          <employee name="krystian.górski" manager="true" administrator="true" moderator="true"/>
+          <employee name="łukasz.nowicki" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+      <course name="Ratownictwo medyczne">
+        <employees>
+          <employee name="nikodem.sikora" manager="true" administrator="true" moderator="true"/>
+          <employee name="gabriel.witkowski" manager="false" administrator="false" moderator="false"/>
+        </employees>
+      </course>
+    </department>
+  </university>
+  <companies>
+    <company name="fortex" city="Bielsko-Biała">
+      <offer name="programista" type="0" trade="informatyka"/>
+      <offer name="tester" type="0" trade="informatyka"/>
+      <offer name="administrator" type="1" trade="informatyka"/>
+      <offer name="sieciowiec" type="1" trade="informatyka"/>
+      <offer name="Spec. ds. jakości" type="0" trade="automatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="budral" city="Bielsko-Biała">
+      <offer name="programista" type="0" trade="informatyka"/>
+      <offer name="tester" type="0" trade="informatyka"/>
+      <offer name="administrator" type="1" trade="informatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="topten" city="Bielsko-Biała">
+      <offer name="programista" type="0" trade="informatyka"/>
+      <offer name="tester" type="0" trade="informatyka"/>
+      <offer name="administrator" type="1" trade="informatyka"/>
+      <offer name="sieciowiec" type="1" trade="informatyka"/>
+      <offer name="bazodanowiec" type="0" trade="informatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="isofix" city="Cieszyn">
+      <offer name="tester" type="0" trade="informatyka"/>
+    </company>
+    <company name="softpol" city="Bielsko-Biała">
+      <offer name="programista" type="0" trade="informatyka"/>
+      <offer name="tester" type="0" trade="informatyka"/>
+    </company>
+    <company name="buddom" city="Bielsko-Biała">
+      <offer name="Operator maszyn" type="0" trade="informatyka"/>
+      <offer name="Pracownik działu technicznego" type="0" trade="elektronika"/>
+      <offer name="Spec. ds. jakości" type="0" trade="automatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="samlax" city="Bielsko-Biała">
+      <offer name="sieciowiec" type="1" trade="informatyka"/>
+      <offer name="bazodanowiec" type="0" trade="informatyka"/>
+      <offer name="serwisant" type="0" trade="elektronika"/>
+      <offer name="tłumacz" type="0" trade="filologia"/>
+      <offer name="projektant" type="0" trade="mechanika"/>
+      <offer name="Zastępca Kierownika Produkcji" type="0" trade="produkcja"/>
+      <offer name="Sprzedawca usług serwisowych" type="0" trade="ogólne"/>
+    </company>
+    <company name="acme" city="Bielsko-Biała">
+      <offer name="serwisant" type="0" trade="elektronika"/>
+      <offer name="tłumacz" type="0" trade="filologia"/>
+      <offer name="projektant" type="0" trade="mechanika"/>
+      <offer name="Zastępca Kierownika Produkcji" type="0" trade="produkcja"/>
+      <offer name="Sprzedawca usług serwisowych" type="0" trade="ogólne"/>
+      <offer name="Informatyk" type="1" trade="informatyka"/>
+      <offer name="Elektronik-Automatyk Utrzymania Ruchu" type="1" trade="mechanika"/>
+      <offer name="Operator maszyn" type="0" trade="informatyka"/>
+      <offer name="Pracownik działu technicznego" type="0" trade="elektronika"/>
+      <offer name="Spec. ds. jakości" type="0" trade="automatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="contoso" city="Żywiec">
+      <offer name="programista" type="0" trade="informatyka"/>
+      <offer name="tester" type="0" trade="informatyka"/>
+      <offer name="administrator" type="1" trade="informatyka"/>
+      <offer name="sieciowiec" type="1" trade="informatyka"/>
+      <offer name="bazodanowiec" type="0" trade="informatyka"/>
+      <offer name="serwisant" type="0" trade="elektronika"/>
+      <offer name="tłumacz" type="0" trade="filologia"/>
+    </company>
+    <company name="RNM" city="Bielsko-Biała">
+      <offer name="tłumacz" type="0" trade="filologia"/>
+      <offer name="projektant" type="0" trade="mechanika"/>
+      <offer name="Zastępca Kierownika Produkcji" type="0" trade="produkcja"/>
+      <offer name="Sprzedawca usług serwisowych" type="0" trade="ogólne"/>
+      <offer name="Informatyk" type="1" trade="informatyka"/>
+      <offer name="Elektronik-Automatyk Utrzymania Ruchu" type="1" trade="mechanika"/>
+      <offer name="Operator maszyn" type="0" trade="informatyka"/>
+      <offer name="Pracownik działu technicznego" type="0" trade="elektronika"/>
+      <offer name="Spec. ds. jakości" type="0" trade="automatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="minor" city="Bielsko-Biała">
+      <offer name="programista" type="0" trade="informatyka"/>
+      <offer name="tester" type="0" trade="informatyka"/>
+      <offer name="administrator" type="1" trade="informatyka"/>
+      <offer name="sieciowiec" type="1" trade="informatyka"/>
+      <offer name="Pracownik działu technicznego" type="0" trade="elektronika"/>
+      <offer name="Spec. ds. jakości" type="0" trade="automatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="major" city="Żywiec">
+      <offer name="programista" type="0" trade="informatyka"/>
+      <offer name="tester" type="0" trade="informatyka"/>
+      <offer name="Zastępca Kierownika Produkcji" type="0" trade="produkcja"/>
+      <offer name="Sprzedawca usług serwisowych" type="0" trade="ogólne"/>
+      <offer name="Informatyk" type="1" trade="informatyka"/>
+      <offer name="Elektronik-Automatyk Utrzymania Ruchu" type="1" trade="mechanika"/>
+      <offer name="Operator maszyn" type="0" trade="informatyka"/>
+      <offer name="Pracownik działu technicznego" type="0" trade="elektronika"/>
+      <offer name="Spec. ds. jakości" type="0" trade="automatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="plec" city="Bielsko-Biała">
+      <offer name="tłumacz" type="0" trade="filologia"/>
+      <offer name="projektant" type="0" trade="mechanika"/>
+      <offer name="Pracownik działu technicznego" type="0" trade="elektronika"/>
+      <offer name="Spec. ds. jakości" type="0" trade="automatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="pol-code" city="Cieszyn">
+      <offer name="programista" type="0" trade="informatyka"/>
+      <offer name="tester" type="0" trade="informatyka"/>
+      <offer name="administrator" type="1" trade="informatyka"/>
+      <offer name="sieciowiec" type="1" trade="informatyka"/>
+      <offer name="bazodanowiec" type="0" trade="informatyka"/>
+      <offer name="serwisant" type="0" trade="elektronika"/>
+      <offer name="tłumacz" type="0" trade="filologia"/>
+    </company>
+    <company name="auto-mech" city="Bielsko-Biała">
+      <offer name="Zastępca Kierownika Produkcji" type="0" trade="produkcja"/>
+      <offer name="Sprzedawca usług serwisowych" type="0" trade="ogólne"/>
+      <offer name="Informatyk" type="1" trade="informatyka"/>
+      <offer name="Elektronik-Automatyk Utrzymania Ruchu" type="1" trade="mechanika"/>
+      <offer name="Operator maszyn" type="0" trade="informatyka"/>
+      <offer name="Pracownik działu technicznego" type="0" trade="elektronika"/>
+      <offer name="Spec. ds. jakości" type="0" trade="automatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="top-serwis" city="Żywiec">
+      <offer name="programista" type="0" trade="informatyka"/>
+      <offer name="tester" type="0" trade="informatyka"/>
+      <offer name="administrator" type="1" trade="informatyka"/>
+      <offer name="sieciowiec" type="1" trade="informatyka"/>
+      <offer name="bazodanowiec" type="0" trade="informatyka"/>
+      <offer name="serwisant" type="0" trade="elektronika"/>
+      <offer name="tłumacz" type="0" trade="filologia"/>
+      <offer name="projektant" type="0" trade="mechanika"/>
+
+      <offer name="Zastępca Kierownika Produkcji" type="0" trade="produkcja"/>
+      <offer name="Sprzedawca usług serwisowych" type="0" trade="ogólne"/>
+      <offer name="Informatyk" type="1" trade="informatyka"/>
+      <offer name="Elektronik-Automatyk Utrzymania Ruchu" type="1" trade="mechanika"/>
+      <offer name="Operator maszyn" type="0" trade="informatyka"/>
+      <offer name="Pracownik działu technicznego" type="0" trade="elektronika"/>
+      <offer name="Spec. ds. jakości" type="0" trade="automatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="fluent-school" city="Bielsko-Biała">
+      <offer name="Informatyk" type="1" trade="informatyka"/>
+      <offer name="Pracownik księgowości AR" type="0" trade="księgowość"/>
+    </company>
+    <company name="soft lab" city="Bielsko-Biała">
+      <offer name="programista" type="0" trade="informatyka"/>
+      <offer name="tester" type="0" trade="informatyka"/>
+      <offer name="administrator" type="1" trade="informatyka"/>
+      <offer name="sieciowiec" type="1" trade="informatyka"/>
+      <offer name="bazodanowiec" type="0" trade="informatyka"/>
+      <offer name="serwisant" type="0" trade="elektronika"/>
+    </company>
+   </companies>
+</sops>

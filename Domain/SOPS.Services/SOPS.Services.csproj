@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{652695F3-C890-4F5E-9BAE-1E74236A9164}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SOPS.Services</RootNamespace>
+    <AssemblyName>SOPS.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LumenWorks.Framework.IO">
+      <HintPath>..\..\packages\LumenWorks.Framework.IO.3.8.0\lib\net20\LumenWorks.Framework.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Companies\CompanyCreator.cs" />
+    <Compile Include="Companies\CompanyDestructor.cs" />
+    <Compile Include="Companies\CompanyUpdater.cs" />
+    <Compile Include="Companies\CompaniesProvider.cs" />
+    <Compile Include="Companies\ICompanyCreator.cs" />
+    <Compile Include="Companies\ICompanyDestructor.cs" />
+    <Compile Include="Companies\ICompanyUpdater.cs" />
+    <Compile Include="Companies\ICompaniesProvider.cs" />
+    <Compile Include="Courses\CoursesProvider.cs" />
+    <Compile Include="Courses\ICoursesProvider.cs" />
+    <Compile Include="Courses\IModesCreator.cs" />
+    <Compile Include="Courses\ModesCreator.cs" />
+    <Compile Include="Documents\DocumentCreator.cs" />
+    <Compile Include="Documents\DocumentDestructor.cs" />
+    <Compile Include="Documents\IDocumentCreator.cs" />
+    <Compile Include="Documents\IDocumentDestructor.cs" />
+    <Compile Include="Employees\EmployeeCreator.cs" />
+    <Compile Include="Employees\EmployeeDestructor.cs" />
+    <Compile Include="Employees\IEmployeeDestructor.cs" />
+    <Compile Include="Employees\EmployeeUpdater.cs" />
+    <Compile Include="Employees\EmployeesProvider.cs" />
+    <Compile Include="Employees\IEmployeeCreator.cs" />
+    <Compile Include="Employees\IEmployeeUpdater.cs" />
+    <Compile Include="Employees\IEmployeesProvider.cs" />
+    <Compile Include="Mail\IMailService.cs" />
+    <Compile Include="Mail\MailService.cs" />
+    <Compile Include="Offers\IOfferTypeCreator.cs" />
+    <Compile Include="Offers\OffersProvider.cs" />
+    <Compile Include="Offers\IOffersProvider.cs" />
+    <Compile Include="Offers\IOfferCreator.cs" />
+    <Compile Include="Offers\IOfferDestructor.cs" />
+    <Compile Include="Offers\IOfferTypeProvider.cs" />
+    <Compile Include="Offers\IOfferUpdater.cs" />
+    <Compile Include="Offers\OfferCreator.cs" />
+    <Compile Include="Offers\OfferDestructor.cs" />
+    <Compile Include="Offers\OfferTypeCreator.cs" />
+    <Compile Include="Offers\OfferTypeProvider.cs" />
+    <Compile Include="Offers\OfferUpdater.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Contracts\ContractGenerator.cs" />
+    <Compile Include="Contracts\ContractProvider.cs" />
+    <Compile Include="Contracts\ContractUpdater.cs" />
+    <Compile Include="Documents\DocumentsProvider.cs" />
+    <Compile Include="Documents\IDocumentsProvider.cs" />
+    <Compile Include="System\IUniversityDetailsCreator.cs" />
+    <Compile Include="System\IUniversityDetailsProvider.cs" />
+    <Compile Include="System\IUniversityDetailsUpdater.cs" />
+    <Compile Include="System\UniversityDetailsCreator.cs" />
+    <Compile Include="System\UniversityDetailsProvider.cs" />
+    <Compile Include="System\UniversityDetailsUpdater.cs" />
+    <Compile Include="Templates\ITemplateCreator.cs" />
+    <Compile Include="Templates\ITemplateDestructor.cs" />
+    <Compile Include="Templates\ITemplatesProvider.cs" />
+    <Compile Include="Templates\TemplateCreator.cs" />
+    <Compile Include="Templates\TemplateDestructor.cs" />
+    <Compile Include="Templates\TemplatesProvider.cs" />
+    <Compile Include="Courses\CourseCreator.cs" />
+    <Compile Include="Courses\CourseDestructor.cs" />
+    <Compile Include="Courses\CourseUpdater.cs" />
+    <Compile Include="Departments\DepartmentCreator.cs" />
+    <Compile Include="Departments\DepartmentDestructor.cs" />
+    <Compile Include="Departments\DepartmentUpdater.cs" />
+    <Compile Include="Courses\ICourseCreator.cs" />
+    <Compile Include="Courses\ICourseDestructor.cs" />
+    <Compile Include="Courses\ICourseUpdater.cs" />
+    <Compile Include="Departments\IDepartmentCreator.cs" />
+    <Compile Include="Departments\IDepartmentDestructor.cs" />
+    <Compile Include="Departments\IDepartmentUpdater.cs" />
+    <Compile Include="Utilities\StringUtilities.cs" />
+    <Compile Include="Students\StudentsProvider.cs" />
+    <Compile Include="Contracts\IContractGenerator.cs" />
+    <Compile Include="Contracts\IContractUpdater.cs" />
+    <Compile Include="Contracts\IContractProvider.cs" />
+    <Compile Include="Students\IStudentsProvider.cs" />
+    <Compile Include="Students\IStudentCreator.cs" />
+    <Compile Include="Students\IStudentDestructor.cs" />
+    <Compile Include="Students\IStudentsImporter.cs" />
+    <Compile Include="Students\IStudentUpdater.cs" />
+    <Compile Include="Students\StudentCreator.cs" />
+    <Compile Include="Students\StudentDestructor.cs" />
+    <Compile Include="Students\CsvStudentsImporter.cs" />
+    <Compile Include="Students\StudentUpdater.cs" />
+    <Compile Include="Departments\DepartmentsProvider.cs" />
+    <Compile Include="Departments\IDepartmentsProvider.cs" />
+    <Compile Include="Courses\IModesProvider.cs" />
+    <Compile Include="Courses\ModesProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Documents\DocGen\DocGen.csproj">
+      <Project>{158b3a2c-3586-42e1-aee3-e8bbf5a30ba6}</Project>
+      <Name>DocGen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\MailingService\MailingService.csproj">
+      <Project>{8ea49898-121e-46ed-88b8-55b780cd9cc5}</Project>
+      <Name>MailingService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Membership\NHMembership\NHMembership.csproj">
+      <Project>{f1ed349f-5f93-4496-940d-92aaf12c9421}</Project>
+      <Name>NHMembership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Repositories\NHibernateRepository\NHibernateRepository.csproj">
+      <Project>{c21ccf4a-27c1-46e6-9a8b-634b89c87c91}</Project>
+      <Name>NHibernateRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOPS.Model\SOPS.Model.csproj">
+      <Project>{C61DE1ED-34C9-459E-91C3-2132C5F1C980}</Project>
+      <Name>SOPS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOPS.Repositories\SOPS.Repositories.csproj">
+      <Project>{a12a6599-6c13-4504-a2b6-e2138840df85}</Project>
+      <Name>SOPS.Repositories</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

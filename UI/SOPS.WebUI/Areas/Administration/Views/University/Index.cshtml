@@ -1,0 +1,46 @@
+﻿@model IEnumerable<int>
+
+@{
+    ViewBag.Title = "Uczelnia";
+}
+
+<div class="row">
+    <h2 class="col_2">Uczelnia</h2>
+</div>
+<div id="university-view" class="row">
+    <div id="tree-container" class="col_12 last">
+        <div class="row">
+            <h3 class="col_2">Wydziały</h3>
+            <div class="col_1">
+                @if (ViewBag.IsRoot)
+                {                  
+                    <button class="green" data-bind="click: addDepartment">
+                        <i class="icon-plus icon-large"></i> Dodaj  
+                    </button>
+                }
+            </div>
+        </div>
+        <ul class="row">
+            @foreach(int deparmentId in Model)
+            {
+                Html.RenderAction("Department", new { departmentId = deparmentId});
+            }
+        </ul>
+    </div>
+</div>
+
+@section dialogs
+{
+   @Html.Action("AddDepartment")
+   @Html.Action("AddCourse")
+   @Html.Action("EditDepartment")
+   @Html.Action("DeleteCourse")
+   @Html.Action("DeleteDepartment")
+}
+
+
+@section scripts
+{
+    <script type="text/javascript" src="/Scripts/views/university-view.js"></script>
+    <script type="text/javascript" src="/Scripts/custom/widgets.js"></script>
+}

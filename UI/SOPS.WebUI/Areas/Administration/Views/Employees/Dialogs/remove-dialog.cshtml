@@ -1,0 +1,17 @@
+﻿
+
+<div id="remove-offer-dialog" class="dialog" 
+     data-bind="jqDialog: { resizable: false, autoOpen: false, modal: true, width: 600, title: 'Usuwanie' },  dialogVisible: isRemoveDialogOpen">
+    @using (Html.BeginForm("Delete", "Employees", FormMethod.Post, new { id = "removeForm", data_bind = "submit: submitRemoveDialog" }))
+    {   
+        <input type="hidden" name="Id" data-bind="value: entity().Id"/>
+        <div class="delete-message"></div>
+        <div>
+            Czy napewno chcesz usunąć pracownika?
+        </div>
+        <div class="buttons">
+            <input type="submit" class="red" value="Usuń"/>
+            <input type="button" value="Anuluj" data-bind="click: closeRemoveDialog"/>
+        </div>
+    }
+</div>

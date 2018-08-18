@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SOPS.WebUI.ViewModels.Download.DownloadViewModel>
+
+<h2>Pliki do pobrania</h2>
+
+<div id="download-view" class="row">
+    <ul>
+        @foreach (var file in Model)
+        {
+            <li class="row">
+                <div class="col_7">
+                    <strong>@file.Name</strong>
+                </div>
+                <div class="col_1">
+                    @Html.ActionLink("Pobierz", "Document", new { id = file.Id })
+                </div>
+            </li>
+        }
+    </ul>
+</div>

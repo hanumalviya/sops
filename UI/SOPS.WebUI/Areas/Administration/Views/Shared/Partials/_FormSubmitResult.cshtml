@@ -1,0 +1,11 @@
+﻿@model ModelStateDictionary
+
+<ul class="validation-summary-errors">
+    @foreach (var item in Model)
+    {
+        foreach (var error in item.Value.Errors)
+        {
+            <li>@error.ErrorMessage</li>
+        }
+    }
+</ul>

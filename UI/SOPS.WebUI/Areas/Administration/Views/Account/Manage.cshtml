@@ -1,0 +1,19 @@
+﻿@model int
+
+@{
+    ViewBag.Title = "Zarządzanie";
+}
+
+@{ Html.RenderAction("UpdateProfile", Model); }
+
+@if(ViewBag.IsCurrentUser)
+{
+    Html.RenderAction("ChangePassword", Model); 
+}
+
+
+@section scripts
+{
+    <script type="text/javascript" src="/Scripts/views/account-view.js"></script>
+    <script type="text/javascript" src="/Scripts/custom/widgets.js"></script>
+}

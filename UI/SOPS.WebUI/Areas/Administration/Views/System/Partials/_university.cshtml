@@ -1,0 +1,29 @@
+﻿@model SOPS.WebUI.Areas.Administration.ViewModels.System.UniversityViewModel
+
+<div class="row">
+    <h3 class="col_5">Uczelnia</h3>
+</div>
+<div class="row margin_top_15">
+    @using(Html.BeginForm("University", "System", FormMethod.Post))
+    {
+        <div class="property">
+            <div class="name col_3">
+                @Html.LabelFor(m => m.Name)
+            </div>
+            <div class="value col_5">
+                @Html.TextBoxFor(m => m.Name)
+            </div>
+        </div>
+        <div class="property">
+            <div class="name col_3">
+                @Html.LabelFor(m => m.Address)
+            </div>
+            <div class="value col_5">
+                @Html.TextBoxFor(m => m.Address)
+            </div>
+        </div>
+        <div class="col_1 pre_7">
+            <input type="submit" value="Zapisz" class="orange"/>
+        </div>
+    }
+</div>   

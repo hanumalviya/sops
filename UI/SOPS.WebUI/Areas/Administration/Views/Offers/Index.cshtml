@@ -1,0 +1,31 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Oferty";
+}
+
+<div class="row">
+    <h2 class="col_1">Oferty</h2>
+</div>
+<div id="offers-view" class="list-details-view row">
+    <div class="list-container col_6">
+        @Html.Partial("Partials/_toolbar")
+        @Html.Partial("Partials/_dataTable")
+    </div>
+    <div class="details-container col_6 last"  data-bind="visible: listIsNotEmpty">
+        @Html.Action("DetailsPartial")
+    </div>
+</div>
+
+@section dialogs
+{
+    @Html.Action("Add")
+    @Html.Action("Edit")
+    @Html.Action("Delete")
+}
+
+@section scripts
+{
+    <script type="text/javascript" src="/Scripts/views/offers-view.js"></script>
+    <script type="text/javascript" src="/Scripts/custom/widgets.js"></script>
+}

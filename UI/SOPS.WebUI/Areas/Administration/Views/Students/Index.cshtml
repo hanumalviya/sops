@@ -1,0 +1,40 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Studenci";
+}
+
+<div class="row">
+    <h2 class="col_1">Studenci</h2>
+</div>
+<div id="students-view" class="list-details-view row">
+    <div class="list-container col_6">
+        @Html.Partial("Partials/_toolbar")
+        @Html.Partial("Partials/_dataTable")
+    </div>
+    <div class="details-container col_6 last" data-bind="visible: anyStudent">
+        @Html.Action("DetailsPartial")
+        <div class="row padding_top_30">
+            @using (Html.BeginForm("Contract", "Students", FormMethod.Get))
+            {
+                <input type="hidden" name="id" data-bind="value: student().Id"/>
+                <button id="contract" class="indigo" type="submit">
+                    <i class="icon-file-alt icon-4"></i><span/>Umowa
+                </button>
+            }
+        </div>
+    </div>
+</div>
+
+@section dialogs
+{
+    @Html.Action("Add")
+    @Html.Action("Edit")
+    @Html.Partial("Dialogs/remove-student-dialog")
+    @Html.Partial("Dialogs/import-student-dialog")
+}
+
+@section scripts
+{
+    <script type="text/javascript" src="/Scripts/views/students-view.js"></script>
+}

@@ -1,0 +1,97 @@
+﻿@using SOPS.WebUI.Areas.Administration.ViewModels.Employees
+@model CreateEmployeeViewModel
+
+<div id="add-employee-dialog" class="dialog"
+    data-bind="jqDialog: { resizable: false, autoOpen: false, modal: true, width: 600, title: 'Pracownik - dodawanie' },  dialogVisible: isAddDialogOpen">
+    @using (Html.BeginForm("Add", "Employees", FormMethod.Post, new { id = "addForm", data_bind = "submit: submitAddDialog"}))
+    {
+        @Html.HiddenFor(m => m.Id)
+        @Html.HiddenFor(m => m.SuperAdministrator)
+        <div class="add-message"></div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.FirstName)</div>
+            <div class="name">@Html.LabelFor(m => m.FirstName)</div>
+            <div class="value">@Html.EditorFor(m => m.FirstName)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.LastName)</div>
+            <div class="name">@Html.LabelFor(m => m.LastName)</div>
+            <div class="value">@Html.EditorFor(m => m.LastName)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.UserName)</div>
+            <div class="name">@Html.LabelFor(m => m.UserName)</div>
+            <div class="value">@Html.EditorFor(m => m.UserName)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Password)</div>
+            <div class="name">@Html.LabelFor(m => m.Password)</div>
+            <div class="value">@Html.EditorFor(m => m.Password)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.PasswordConfirm)</div>
+            <div class="name">@Html.LabelFor(m => m.PasswordConfirm)</div>
+            <div class="value">@Html.EditorFor(m => m.PasswordConfirm)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Question)</div>
+            <div class="name">@Html.LabelFor(m => m.Question)</div>
+            <div class="value">@Html.EditorFor(m => m.Question)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Answer)</div>
+            <div class="name">@Html.LabelFor(m => m.Answer)</div>
+            <div class="value">@Html.EditorFor(m => m.Answer)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.AnswerConfirm)</div>
+            <div class="name">@Html.LabelFor(m => m.AnswerConfirm)</div>
+            <div class="value">@Html.EditorFor(m => m.AnswerConfirm)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Email)</div>
+            <div class="name">@Html.LabelFor(m => m.Email)</div>
+            <div class="value">@Html.EditorFor(m => m.Email)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Department)</div>
+            <div class="name">@Html.LabelFor(m => m.Department)</div>
+            <div class="value">@Html.DropDownListFor(m => m.Department, new SelectList(ViewBag.Department, "Value", "Text", Model.Department), new {data_bind="value: selectedDepartment"})</div>
+        </div>
+
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Course)</div>
+            <div class="name">@Html.LabelFor(m => m.Course)</div>
+            <div class="value">
+                   <select name="Course" data-bind="options: availableCourses, 
+                   optionsText: function(item) { 
+                       return item.Text;
+                   }, 
+                   optionsValue: function(item) { 
+                       return item.Value;
+                   }"></select>
+            </div>
+        </div>
+        if (ViewBag.IsRoot)
+        {
+            <div class="property">
+                <div class="validation">@Html.ValidationMessageFor(m => m.Administrator)</div>
+                <div class="name">@Html.LabelFor(m => m.Administrator)</div>
+                <div class="value">@Html.EditorFor(m => m.Administrator)</div>
+            </div>
+        }
+        else
+        {
+            @Html.HiddenFor(m => m.Administrator)
+        }
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Moderator)</div>
+            <div class="name">@Html.LabelFor(m => m.Moderator)</div>
+            <div class="value">@Html.EditorFor(m => m.Moderator)</div>
+        </div>
+        <div class="buttons">
+            <input type="submit" class="green" value="Zapisz"/>
+            <input type="button" value="Anuluj" data-bind="click: closeAddDialog"/>
+        </div>
+    }
+</div>

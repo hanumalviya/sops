@@ -1,0 +1,23 @@
+﻿@model SOPS.WebUI.ViewModels.Shared.Paging
+
+<ul class="paging">
+    
+    @if (Model.Previous.HasValue)
+    {
+        <li>
+            @Html.ActionLink("<<", "Index", "Home", new { Search = ViewBag.Search, Page = Model.Previous.Value}, new { data_bind = "click: selectPage", data_search = ViewBag.Search, data_page = Model.Previous.Value })
+        </li>
+    }
+    @foreach (var i in Model.Pages)
+    {
+        <li @(i == Model.CurrentPage ? "class=currentPage" : null)>
+            @Html.ActionLink((i + 1).ToString(), "Index", "Home", new { Search = ViewBag.Search, Page = i}, new { data_bind = "click: selectPage", data_search = ViewBag.Search, data_page = i})
+        </li>
+    }
+    @if (Model.Next.HasValue)
+    {
+        <li>
+            @Html.ActionLink(">>", "Index", "Home", new {Search = ViewBag.Search, Page = Model.Next.Value}, new { data_bind = "click: selectPage", data_search = ViewBag.Search, data_page = Model.Next.Value } )
+        </li>
+    }
+</ul>

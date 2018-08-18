@@ -1,0 +1,17 @@
+﻿<div class="data-table row"  data-bind="visible: anyStudent">
+    <div class="header row">
+        <div class="col_3">
+            Imię i nazwisko
+        </div>
+        <div class="col_2">
+            Numer albumu
+        </div>
+    </div>
+
+    <ul class="body row" data-bind="foreach: studentsList">
+        <li class="row" data-bind="click: $root.selectStudent, attr: { data_id: $data.Id }, css: { selected: $data.Id() == $root.selectedItem() }">
+            <div class="col_3" data-bind="text: $data.Name"></div>
+            <div class="col_2" data-bind="text: $data.Album"></div>
+        </li>
+    </ul>
+</div>

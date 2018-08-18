@@ -1,0 +1,77 @@
+﻿@using SOPS.WebUI.Areas.Administration.ViewModels.Employees
+@model EmployeeViewModel
+
+<div id="edit-employee-dialog" class="dialog" 
+    data-bind="jqDialog: { resizable: false, autoOpen: false, modal: true, width: 600, title: 'Pracownik - edycja' },  dialogVisible: isEditDialogOpen">
+    @using (Html.BeginForm("Edit", "Employees", FormMethod.Post, new { id = "editForm", data_bind = "submit: submitEditDialog" }))
+    {
+        <input type="hidden" name="Id" data-bind="value: entity().Id"/>
+        @Html.HiddenFor(m => m.SuperAdministrator)
+        <div class="edit-message"></div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.FirstName)</div>
+            <div class="name">@Html.LabelFor(m => m.FirstName)</div>
+            <div class="value"><input type="text" name="FirstName" data-bind="value: entity().FirstName" /></div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.LastName)</div>
+            <div class="name">@Html.LabelFor(m => m.LastName)</div>
+            <div class="value"><input type="text" name="LastName" data-bind="value: entity().LastName" /></div>
+        </div>
+        <div class="property">
+            <div class="name">@Html.LabelFor(m => m.Email)</div>
+            <div class="value"><input type="text" name="Email" data-bind="value: entity().Email" /></div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Department)</div>
+            <div class="name">@Html.LabelFor(m => m.Department)</div>
+            <div class="value">@Html.DropDownList("Department", new SelectList(ViewBag.Department, "Value", "Text"), new { data_bind="value: entity().Department" })</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Course)</div>
+            <div class="name">@Html.LabelFor(m => m.Course)</div>
+            <div class="value">
+                <select name="Course" data-bind="options: availableCourses, 
+                   optionsText: function(item) { 
+                       return item.Text;
+                   }, 
+                   optionsValue: function(item) { 
+                       return item.Value;
+                   }, 
+                   value: editSelectedCourse"></select>
+            </div>
+        </div>
+        
+        if (ViewBag.IsRoot)
+        {
+            <div class="property">
+                <div class="validation">@Html.ValidationMessageFor(m => m.Administrator)</div>
+                <div class="name">@Html.LabelFor(m => m.Administrator)</div>
+                <div class="value">
+                    <input data-val="true" id="Administrator" name="Administrator" type="checkbox" value="true" data-bind="checked: entity().Administrator">
+                    <input name="Administrator" type="hidden" value="false"/>
+                </div>
+            </div>
+        }
+        else
+        {
+            <input type="hidden" name="Administrator" data-bind="value: entity().Administrator"/>
+        }
+
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Moderator)</div>
+            <div class="name">@Html.LabelFor(m => m.Moderator)</div>
+            <div class="value">
+                <input data-val="true" id="Moderator" name="Moderator" type="checkbox" value="true" data-bind="checked: entity().Moderator">
+                <input name="Moderator" type="hidden" value="false"/>
+            </div>
+        </div>
+        <div class="property">
+            <div class="name"><a data-bind="attr: { href: entity().ManageUrl}" >Edytuj profil</a></div>
+        </div>
+        <div class="buttons">
+            <input type="submit" class="orange" value="Zapisz"/>
+            <input type="button" value="Anuluj" data-bind="click: closeEditDialog"/>
+        </div>
+    }
+</div>

@@ -1,0 +1,238 @@
+/* ==========================================================================
+   backend styles
+   ========================================================================== */
+@import "_normalize.less";
+@import "_columnal.less";
+@import "_colors.less";
+@import "_typography.less";
+@import "_forms.less";
+
+html, body {
+    background-color: @html-bg-color;
+	padding: 0px;
+	margin: 0px;
+}
+
+.hidden{
+	display:none;
+}
+
+input[type=submit], input[type=button] {
+    &.blue {
+        background: @sky-blue-light;
+        color: white;
+
+        &:hover {
+            background: @sky-blue;
+        }
+    }
+
+    &.green {
+        background: @green-light;
+        color: white;
+
+        &:hover {
+            background: @green;
+        }
+    }
+
+    &.orange {
+        background: @orange-light;
+        color: white;
+
+        &:hover {
+            background: @orange;
+        }
+    }
+
+    &.red {
+        background: @red-light;
+        color: white;
+
+        &:hover {
+            background: @red;
+        }
+    }
+
+    &.indigo {
+        background: @indigo-light;
+        color: white;
+
+        &:hover {
+            background: @indigo;
+        }
+    }
+
+	&[disabled=true]{
+		background: @gray-light;
+
+		&:hover {
+            background: @gray-light;
+        }
+	}
+}
+
+#site {
+    width: 1140px;
+    margin: auto;
+    background-color: @body-bg-color;
+    border: 1px solid darken(@body-bg-color, 10%);
+    border-top: 0px;
+    font: 0.81em @base-font-light;
+}
+
+#header-main {
+    height: 54px;
+    background-color: lighten(@body-bg-color, 60%);
+    border-bottom: 1px lighten(@body-bg-color, 10%);
+    margin: 0px;
+    display: block;
+
+    #logo {
+        margin: 0px 0px 0px 20px;
+        padding: 0px;
+        color: @sky-blue;
+        font: 32px @base-font-light;
+    }
+}
+
+#nav-main{
+	//padding-top:40px;
+	h2{
+		color:@gray;
+		margin-left:25px;
+	}
+	a{
+		display:block;
+		margin:5px;
+		padding:3px;
+
+		height:24px;
+		color:@gray;
+		text-decoration: none;
+		font: 18px @base-font-light;
+		
+
+		&:hover{
+			color:@sky-blue;
+		}
+	}
+}
+
+#main-container{
+	#main {
+		padding: 10px 20px 10px 20px;
+		color: @gray;
+
+		h1, h2, h3, h4, h5, h6{
+			margin:0px;
+			padding:0px;
+		}
+	}
+}
+
+#footer-main {
+    height: 30px;
+    margin: auto;
+    border-top: 1px solid #d9d9d9;
+}
+
+#download-view{
+	li{
+		border-bottom:1px solid @gray-light;
+		padding: 5px;
+	}
+}
+
+.paged-list-view {
+    .search-box {
+        input[type=search], input[type=text] {
+            width: 400px;
+            height: 25px;
+        }
+
+        input[type=submit] {
+			margin-left:2px;
+			height:35px;
+        }
+    }
+
+	.grid{
+		list-style:none;
+		padding:0px;
+		margin:0px;
+		margin-top:30px;
+
+		li{
+			display:inline-block;
+			list-style:none;
+			margin:5px;
+			padding:5px;
+			float:left;
+			background:lighten(@gray-light, 22%);
+			border:1px solid lighten(@gray-light, 10%);
+			width:400px;
+			color:@gray-dark;
+
+			.left{
+				float:left;
+			}
+
+			.right{
+				float:right;
+			}
+
+			.title{
+				font-size:18px;
+			}
+		}
+	}
+
+	.paging{
+		list-style:none;
+		padding:0px;
+		margin:0px;
+		margin-top:30px;
+
+
+
+		li{
+			display:inline-block;
+			list-style:none;
+			margin:1px;
+
+			&.currentPage a{
+				color:#fff;
+				background:@sky-blue;
+
+				&:hover{
+					background:lighten(@sky-blue, 15%);
+				}
+			}
+
+			a{
+				background:lighten(@gray-light, 22%);
+				border:1px solid lighten(@gray-light, 10%);
+				text-align:center;
+				width:40px;
+				padding-top:3px;
+				padding-bottom:3px;
+				display:block;
+				text-decoration: none;
+				color:@gray-dark;
+				cursor:pointer;
+
+				&:hover{
+					background:lighten(@gray-light, 15%);
+				}
+			}
+		}
+	}
+}
+
+.details-view{
+	.property{
+		font-size:16px;
+		margin-bottom:5px;
+	}
+}

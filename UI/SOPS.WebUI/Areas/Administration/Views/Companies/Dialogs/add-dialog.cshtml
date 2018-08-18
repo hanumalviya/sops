@@ -1,0 +1,57 @@
+﻿@using SOPS.WebUI.Areas.Administration.ViewModels.Companies
+@model CompanyViewModel
+
+<div id="add-company-dialog" class="dialog"
+    data-bind="jqDialog: { resizable: false, autoOpen: false, modal: true, width: 600, title: 'Firma - dodawanie' },  dialogVisible: isAddDialogOpen">
+    @using (Html.BeginForm("Add", "Companies", FormMethod.Post, new { id = "addForm", data_bind = "submit: submitAddDialog"}))
+    {
+        @Html.HiddenFor(m => m.Id)
+        <div class="add-message"></div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Name)</div>
+            <div class="name">@Html.LabelFor(m => m.Name)</div>
+            <div class="value">@Html.EditorFor(m => m.Name)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Url)</div>
+            <div class="name">@Html.LabelFor(m => m.Url)</div>
+            <div class="value">@Html.EditorFor(m => m.Url)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.City)</div>
+            <div class="name">@Html.LabelFor(m => m.City)</div>
+            <div class="value">@Html.EditorFor(m => m.City)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Street)</div>
+            <div class="name">@Html.LabelFor(m => m.Street)</div>
+            <div class="value">@Html.EditorFor(m => m.Street)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.PostalCode)</div>
+            <div class="name">@Html.LabelFor(m => m.PostalCode)</div>
+            <div class="value">@Html.EditorFor(m => m.PostalCode)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Email)</div>
+            <div class="name">@Html.LabelFor(m => m.Email)</div>
+            <div class="value">@Html.EditorFor(m => m.Email)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Phone)</div>
+            <div class="name">@Html.LabelFor(m => m.Phone)</div>
+            <div class="value">@Html.EditorFor(m => m.Phone)</div>
+        </div>
+        <div class="property">
+            <div class=" name">@Html.LabelFor(m => m.Description)</div>
+        </div>
+        <div class="property">
+            <div class="validation">@Html.ValidationMessageFor(m => m.Description)</div>
+            <div class="fullLine">@Html.EditorFor(m => m.Description)</div>
+        </div>
+        <div class="buttons">
+            <input type="submit" class="green" value="Zapisz"/>
+            <input type="button" value="Anuluj" data-bind="click: closeAddDialog"/>
+        </div>
+    }
+</div>

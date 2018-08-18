@@ -1,0 +1,51 @@
+﻿
+@model SOPS.WebUI.ViewModels.Companies.CompanyViewModel
+
+@{
+    ViewBag.Title = "Szczegóły";
+}
+<h2>@Model.Company</h2>
+<div id="offer-details-view" class="details-view">
+    <div class="row property">
+        <div class="col_2">
+            <strong>Adres firmy</strong>
+        </div>
+        <div class="col_6">
+            @Model.Address
+        </div>
+    </div>
+    <div class="row property">
+        <div class="col_2">
+            <strong>Adres email</strong>
+        </div>
+        <div class="col_6">
+            @Model.Email
+        </div>
+    </div>
+    <div class="row property">
+        <div class="col_2">
+            <strong>Numer telefonu</strong>
+        </div>
+        <div class="col_3">
+            @Model.Phone
+        </div>
+    </div>
+    <div class="row property">
+        <div class="col_2">
+            <strong>Strona internetowa</strong>
+        </div>
+        <div class="col_3">
+            <a href="@Model.Site">@Model.Site</a>
+        </div>
+    </div>
+    <div class="row property">
+        <div class="col_2">
+            <strong>Opis</strong>
+        </div>
+    </div>
+    <div class="row property">
+        <div class="col_8">
+            @Model.Description
+        </div>
+    </div>
+</div>

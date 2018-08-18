@@ -1,0 +1,13 @@
+﻿@model IEnumerable<SOPS.WebUI.ViewModels.Companies.ListItemViewModel>
+
+<ul class="grid">
+    @foreach (var item in Model)
+    {
+        <li>
+            @Html.Partial("Partials/_element", item)
+        </li>
+    }
+</ul>
+<div class="row margin_top_25 margin_bottom_25">
+    @Html.Action("Paging", "Company", new { Search = ViewBag.Search, Page = ViewBag.Page})
+</div>

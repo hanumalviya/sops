@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sops>
+  <university>
+    <department name="Wydział Budowy Maszyn i Informatyki">
+      <course name="Mechanika i budowa maszyn">
+      </course>
+      <course name="Zarządzanie i inżynieria produkcji">
+      </course>
+      <course name="Informatyka">
+      </course>
+      <course name="Automatyka i robotyka">
+      </course>
+    </department>
+
+    <department name="Wydział Nauk o Materiałach i Środowisku">
+      <course name="Budownictwo">
+      </course>
+      <course name="Włókiennictwo">
+      </course>
+      <course name="Inżynieria środowiska">
+      </course>
+      <course name="Ochrona środowiska">
+      </course>
+    </department>
+
+    <department name="Wydział Zarządzania i Informatyki">
+      <course name="Zarządzanie">
+      </course>
+      <course name="Stosunki międzynarodowe">
+      </course>
+      <course name="Socjologia">
+      </course>
+      <course name="Transport">
+      </course>
+    </department>
+
+    <department name="Wydział Humanistyczno-Społeczny">
+      <course name="Filologia angielska">
+      </course>
+      <course name="Filologia hiszpańska">
+      </course>
+      <course name="Filologia słowiańska">
+      </course>
+      <course name="Translacja angielsko-rosyjsko-polska">
+      </course>
+      <course name="Pedagogika">
+      </course>
+      <course name="Filologia polska">
+      </course>
+    </department>    
+    <department name="Wydział Nauk o Zdrowiu">
+      <course name="Pielęgniarstwo">
+      </course>
+      <course name="Ratownictwo medyczne">
+      </course>
+    </department>
+  </university>
+</sops>

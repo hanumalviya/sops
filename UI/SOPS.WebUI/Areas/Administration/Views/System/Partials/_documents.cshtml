@@ -1,0 +1,27 @@
+﻿@model SOPS.WebUI.Areas.Administration.ViewModels.System.ResourcesListViewModel
+
+<div class="row margin_top_30">
+    <div class="row margin_bottom_15">
+        <h3 class="col_4">@Model.Title</h3>
+        <div class="col_1">
+            <button name="add" class="green" data-bind="click: uploadDocument">
+                <i class="icon-plus icon-large"></i> Dodaj  
+            </button>
+        </div>
+    </div>
+    <ul class="row resources-panel">
+        @foreach (var resource in Model.Resources)
+        {
+            <li class="row">
+                <div class="name col_4">
+                    @Html.ActionLink(resource.Name, "Document", new { id = resource.Id })
+                </div>
+                <div class="value col_1">
+                    <button name="delete" class="red"  data-itemid="@resource.Id" data-bind="click: removeDocument">
+                        <i class=" icon-remove icon-large"></i> Usuń  
+                    </button>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

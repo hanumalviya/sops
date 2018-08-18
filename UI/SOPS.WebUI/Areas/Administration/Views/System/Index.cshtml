@@ -1,0 +1,39 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "System";
+}
+
+<div class="row">
+    <h2>System</h2>
+</div>
+<div id="system-view" class="row">
+    <div class="col_9 pre_2">
+        @Html.Action("UniversityPartial") 
+
+        @if(ViewBag.IsRoot)
+        {
+            @Html.Partial("Partials/_removeAllStudents")
+        }
+        
+        @Html.Action("Templates")
+        @Html.Action("Documents")
+        
+    </div>
+</div>
+
+@section dialogs
+{
+    @Html.Action("DeleteTemplate");
+    @Html.Action("DeleteDocument");
+    @Html.Partial("Dialogs/upload-document-dialog")
+    @Html.Partial("Dialogs/upload-template-dialog")
+    @Html.Partial("Dialogs/remove-students-dialog")
+}
+
+
+@section scripts
+{
+    <script type="text/javascript" src="/Scripts/views/system-view.js"></script>
+    <script type="text/javascript" src="/Scripts/custom/widgets.js"></script>
+}

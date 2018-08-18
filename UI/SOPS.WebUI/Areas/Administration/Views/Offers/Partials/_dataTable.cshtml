@@ -1,0 +1,17 @@
+﻿<div class="data-table row"  data-bind="visible: listIsNotEmpty">
+    <div class="header row">
+        <div class="col_4">
+            Tytuł oferty
+        </div>
+        <div class="col_2 last">
+            Firma
+        </div>
+    </div>
+
+    <ul class="body row" data-bind="foreach: list">
+        <li class="row" data-bind="click: $root.selectEntity, attr: { data_id: $data.Id }, css: { selected: $data.Id() == $root.selectedItem() }">
+            <div class="col_4" data-bind="text: $data.Title"></div>
+            <div class="col_2 last" data-bind="text: $data.Company"></div>
+        </li>
+    </ul>
+</div>

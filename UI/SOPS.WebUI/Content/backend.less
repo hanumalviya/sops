@@ -1,0 +1,495 @@
+/* ==========================================================================
+   backend styles
+   ========================================================================== */
+@import "_normalize.less";
+@import "_columnal.less";
+@import "_colors.less";
+@import "_typography.less";
+@import "_notifications.less";
+@import "_font-awesome.less";
+@import "_forms.less";
+
+html, body {
+    background-color: @html-bg-color;
+	padding: 0px;
+	margin: 0px;
+}
+
+.hidden{
+	display:none;
+}
+
+button {
+	i{
+		padding:0px;
+		margin:0px;
+		position:relative;
+		display:inline-block;
+		margin-right:2px;
+	}
+
+	font-size:12px;
+	width:70px;
+	padding:5px 2px;
+	border:1px solid #808080;
+	height:32px;
+}
+
+input[type=submit], input[type=button], button {
+    &.blue {
+        &:hover {
+			background: @sky-blue-light;
+			color: white;
+        }
+    }
+
+    &.green {
+        &:hover {
+			background: @green-light;
+			color: white;
+        }
+    }
+
+    &.orange {
+        &:hover {
+			background: @orange-light;
+			color: white;
+        }
+    }
+
+    &.red {
+        &:hover {
+			background: @red-light;
+			color: white;
+        }
+    }
+
+    &.indigo {
+        &:hover {
+			background: @indigo-light;
+			color: white;
+        }
+    }
+
+	&[disabled=true]{
+		background: @gray-light;
+
+		&:hover {
+            background: @gray-light;
+        }
+	}
+}
+
+#site {
+    width: 1140px;
+    margin: auto;
+    background-color: @body-bg-color;
+    border: 1px solid darken(@body-bg-color, 10%);
+    border-top: 0px;
+    font: 0.81em @base-font-light;
+}
+
+#header-main {
+    height: 54px;
+    background-color: lighten(@body-bg-color, 60%);
+    border-bottom: 1px lighten(@body-bg-color, 10%);
+    margin: 0px;
+    display: block;
+
+    #logo {
+        margin: 0px 0px 0px 20px;
+        padding: 0px;
+        color: @sky-blue;
+        font: 32px @base-font-light;
+    }
+
+    #nav-main {
+        height: 40px;
+        background-color: lighten(@body-bg-color, 10%);
+
+        a {
+            color: @gray-light;
+            font: 20px @base-font-common;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover {
+                color: @blue;
+            }
+        }
+
+        ul li {
+            display: inline-block;
+			float:left;
+
+        }
+    }
+
+	#account {
+        color: @gray-light;
+        font: 20px @base-font-common;
+        text-transform: uppercase;
+        text-decoration: none;
+		line-height: 20px;
+		margin-top: 5px;
+		text-align: right;
+		float:right;
+
+        img {
+            height: 22px;
+			display: block;
+			margin-right:5px;
+			float:left;
+        }
+
+        &:hover {
+            color: @blue;
+        }
+    }
+}
+
+#changePasswordForm{
+	input[type=button], input[type=submit]{
+		margin:1px;
+		float:right;
+	}
+
+	.buttons{
+		margin-left:15px;
+	}
+}
+
+#main-container{
+	#main {
+		padding: 10px 20px 10px 20px;
+		color: @gray;
+
+		h1, h2, h3, h4, h5, h6{
+			margin:0px;
+			padding:0px;
+		}
+	}
+}
+
+#footer-main {
+    height: 30px;
+    margin: auto;
+    border-top: 1px solid #d9d9d9;
+}
+
+.list-details-view {
+    .list-container {
+        .toolbar {
+            input[type=button] {
+                width: 65px;
+                padding-left: 0px;
+                padding-right: 0px;
+                margin: 2px 0px;
+            }
+
+            input[type=search], input[type=text] {
+                width: 230px;
+                height: 20px;
+                color: @gray-light;
+            }
+        }
+
+        .data-table {
+            font: 16px @base-font-common;
+            margin-top: 5px;
+
+            .header {
+                border-bottom: lighten(@gray-light, 50%) 1px solid;
+                font-size: 18px;
+            }
+
+            .body {
+                display: block;
+                height: 500px;
+                overflow-y: auto;
+
+                li {
+                    cursor: pointer;
+                    padding: 3px;
+
+                    &.odd {
+                        background: lighten(@silver-light, 5%);
+                    }
+
+                    &:hover {
+                        background-color: @sky-blue-dark;
+                        color: white;
+                    }
+
+                    &.selected {
+                        background-color: @sky-blue;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .details-container {
+        font: 17px @base-font-common;
+
+        h4 {
+            font-weight: lighter;
+            color: @sky-blue;
+            font: 30px @base-font-light;
+        }
+
+        .property {
+            margin-bottom: 5px;
+
+            .name {
+                font: 16px @base-font-common;
+                font-weight: 400;
+                color: @gray-dark;
+            }
+
+            .value {
+                font: 16px @base-font-light;
+            }
+        }
+
+        .display-only-select {
+			width: 300px;
+			display: inline-block;
+			overflow-x: hidden;
+
+            select {
+                background-color: white;
+                border: none;
+                width: 350px;
+                margin: 0px;
+                padding: 0px;
+				font: normal normal 400 16px/normal "Segoe UI Light";
+				margin-left: -1px;
+				height:22px;
+            }
+        }
+    }
+}
+
+#students-view{
+	.details-container{
+		#contract{
+			font: 25px @base-font-light;
+			display:block;
+			margin:auto;
+			width: 180px;
+			height: 55px;
+		}
+	}
+}
+
+#contract-view {
+	#contract{
+		font: 25px @base-font-light;
+		display:block;
+		margin:auto;
+		width: 180px;
+		height: 55px;
+	}
+
+    #student-details {
+        .property {
+			margin-bottom: 5px;
+
+            .name {
+                font-weight: 400;
+            }
+
+            .value {
+                font: 16px @base-font-light;
+            }
+        }
+    }
+
+    #contract-edit {
+        .property {
+            .name {
+                padding-top: 8px;
+				font-weight: 400;
+            }
+        }
+
+		#CompanyId{
+			height:32px;
+			margin-top:0px;
+			width:190px;
+		}
+    }
+}
+
+
+#offers-view, #companies-view, #employees-view {
+    .list-container {
+        .toolbar {
+            input[type=search], input[type=text] {
+                width: 300px;
+                height: 20px;
+                color: @gray-light;
+            }
+        }
+    }
+
+    .details-container {
+		input[type=checkbox]{
+			display:block;
+			padding:2px;
+		}
+    }
+}
+
+#university-view{
+	#tree-container{
+		h2, h3, h4, h5, h6{
+			margin:0px;
+			padding:0px;
+		}
+		
+		h3{
+			color: @sky-blue-dark;
+			text-transform:uppercase;
+			font-size:24px;
+		}
+
+		strong{
+			height:20px;
+			display:inline-block;
+			padding-top:8px;
+		}
+
+		select{
+			height:30px;
+			display:inline-block;
+			padding-top:2px;
+		}
+
+		input[type=button]{
+			margin:1px;
+			width:60px;
+		}
+
+		.actions{
+			margin-left:-50px;
+		}
+	}
+}
+
+#system-view{
+	font: 17px @base-font-light;
+	h3{
+		font-size:24px;
+		padding:0px;
+		margin:0px;
+	}
+
+	a{
+		font-size:15px;
+		padding-top:3px;
+	}
+
+	input[type=button]{
+		width:70px;
+		margin:0px;
+		padding:0, 5px;
+
+		&.green{
+			margin-left: 42px;
+		}
+	}
+
+	.resources-panel{
+		.red{
+			margin-left:-43px;
+		}
+	}
+}
+
+.dialog {
+    .name, .value, .vadlidation {
+        display: inline-block;
+    }
+
+    .property {
+        .fullLine {
+            width: inherit;
+        }
+
+        .value, .fullLine {
+            input[type=text], 
+			input[type=email], 
+			input[type=tel], 
+			input[type=number], 
+			input[type=url], 
+			input[type=password], 
+			textarea {
+                width: inherit;
+                text-align: left;
+            }
+
+			textarea{
+				min-height:100px;
+			}
+
+            select {
+                width: 104%;
+                text-align: left;
+            }
+        }
+    }
+
+    .buttons {
+        float: right;
+        margin-top: 10px;
+
+        input[type=submit], input[type=button] {
+            margin: 1px;
+            width: 100px;
+        }
+    }
+}
+
+#add-student-dialog, #edit-student-dialog, 
+#add-offer-dialog, #edit-offer-dialog, 
+#add-company-dialog, #edit-company-dialog,
+#add-employee-dialog, #edit-employee-dialog,
+#add-department-dialog, #edit-department-dialog,
+#add-course-dialog, #edit-course-dialog{
+	.name{
+		width:200px;
+	}
+
+	.value{
+		width:345px;
+	}
+
+	.validation{
+		width:400px;
+	}
+
+	.fullLine{
+		width: 550px;
+	}
+}
+
+#import-student-dialog, #upload-document-dialog, #upload-template-dialog {
+    .name {
+        width: 200px;
+    }
+
+    .value {
+        width: 250px;
+    }
+
+    input[type=file] {
+		width: 560px;
+    }
+
+    .validation {
+        width: 300px;
+    }
+}
